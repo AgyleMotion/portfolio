@@ -611,3 +611,23 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+/* Circular photo frame in the header */
+.header__photo {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header__photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
