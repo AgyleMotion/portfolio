@@ -619,7 +619,7 @@ body:not(.user-is-tabbing) a:focus {
     justify-content: space-between; /* Push text to the left and photo to the right */
     flex-wrap: nowrap; /* Prevent stacking */
     padding: 20px; /* Add padding for spacing */
-    gap: 30px; /* Space between text and photo */
+    gap: 800px; /* Space between text and photo */
 }
 
 /* Text section */
