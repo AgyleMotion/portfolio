@@ -647,7 +647,7 @@ body:not(.user-is-tabbing) a:focus {
   /* Responsive adjustments for smaller screens */
   @media screen and (max-width: 768px) {
     .header__content {
-      flex-direction: column; /* Stack text and photo vertically */
+      flex-direction: row; /* Stack text and photo vertically */
       text-align: left;
     }
   
@@ -656,7 +656,7 @@ body:not(.user-is-tabbing) a:focus {
     }
 
     .header__photo {
-        margin-left: 400px;
+        margin-left: 6000px;
       }
   
     .header__text {
