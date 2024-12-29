@@ -648,11 +648,11 @@ body:not(.user-is-tabbing) a:focus {
   @media screen and (max-width: 768px) {
     .header__content {
       flex-direction: column; /* Stack text and photo vertically */
-      text-align: center;
+      text-align: left;
     }
   
     .header__photo {
-      margin-top: 20px;
+      margin-top: 50px;
     }
 
     .header__photo {
