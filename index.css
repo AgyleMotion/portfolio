@@ -619,6 +619,7 @@ body:not(.user-is-tabbing) a:focus {
     justify-content: space-between; /* Push text to the left and photo to the right */
     flex-wrap: nowrap; /* Prevent stacking */
     padding: 20px; /* Add padding for spacing */
+    margin-top: 60px ;
     gap: 800px; /* Space between text and photo */
 }
 
@@ -627,7 +628,7 @@ body:not(.user-is-tabbing) a:focus {
     flex: 1; /* Allow text to take up remaining space */
     max-width: 60%; /* Limit the width of the text */
     margin-right: 20px; /* Add spacing between text and photo */
-    margin-top: 100px;
+    
     color: var(--white); /* Ensure text is readable */
 }
 
