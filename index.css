@@ -620,21 +620,31 @@ body:not(.user-is-tabbing) a:focus {
     flex-wrap: nowrap; /* Ensure text and photo stay on one line */
     padding: 20px;
   }
+  /* Layout for the header */
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push text and photo apart */
+    padding: 20px;
+    flex-wrap: nowrap; /* Prevent stacking vertically */
+  }
   
   /* Styling for the text section */
   .header__text {
-    max-width: 60%; /* Adjust as needed to balance text and photo space */
+    flex: 1; /* Occupy available space on the left */
+    max-width: 60%; /* Limit text width */
+    margin-right: 20px; /* Add spacing between text and photo */
   }
   
   /* Styling for the profile picture */
   .header__photo {
-    width: 400px; /* Three times larger */
-    height: 400px; /* Maintain circular shape */
+    width: 300px; /* Larger photo */
+    height: 300px; /* Maintain circular shape */
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #fff;
+    border: 5px solid #fff;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0; /* Prevent shrinking of the photo */
+    margin-left: auto; /* Push photo far to the right */
   }
   
   /* Ensure the image fills the circular frame */
@@ -644,23 +654,34 @@ body:not(.user-is-tabbing) a:focus {
     object-fit: cover;
   }
   
-  /* Responsive adjustments for smaller screens */
-  @media screen and (max-width: 768px) {
+  /* Responsive adjustments */
+  @media screen and (max-width: 1024px) {
     .header__content {
-      flex-direction: row; /* Stack text and photo vertically */
-      text-align: left;
+      gap: 20px; /* Reduce spacing on smaller screens */
     }
   
     .header__photo {
-      margin-top: 50px;
+      width: 250px; /* Slightly smaller photo */
+      height: 250px;
     }
-
-    .header__photo {
-        margin-left: 6000px;
-      }
   
     .header__text {
-      max-width: 100%;
+      max-width: 70%; /* Adjust text width */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header__content {
+      flex-wrap: nowrap; /* Prevent stacking */
+    }
+  
+    .header__text {
+      max-width: 65%; /* Allow more space for text */
+    }
+  
+    .header__photo {
+      width: 200px; /* Smaller photo on small screens */
+      height: 200px;
     }
   }
   
