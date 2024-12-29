@@ -612,28 +612,52 @@ body:not(.user-is-tabbing) a:focus {
     } 
 }
 
-/* Style for header layout */
-.header__text-box {
+/* Layout for the header */
+.header__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Ensure text and photo stay on one line */
+    padding: 20px;
   }
   
-  /* Larger and right-aligned circular photo */
+  /* Styling for the text section */
+  .header__text {
+    max-width: 60%; /* Adjust as needed to balance text and photo space */
+  }
+  
+  /* Styling for the profile picture */
   .header__photo {
-    width: 300px; /* Increased size */
-    height: 300px; /* Maintains circular shape */
+    width: 400px; /* Three times larger */
+    height: 400px; /* Maintain circular shape */
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #fff;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0; /* Prevent shrinking of the photo */
   }
   
+  /* Ensure the image fills the circular frame */
   .header__photo-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  
+  /* Responsive adjustments for smaller screens */
+  @media screen and (max-width: 768px) {
+    .header__content {
+      flex-direction: column; /* Stack text and photo vertically */
+      text-align: center;
+    }
+  
+    .header__photo {
+      margin-top: 20px;
+    }
+  
+    .header__text {
+      max-width: 100%;
+    }
+  }
+  
   
