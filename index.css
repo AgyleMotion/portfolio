@@ -654,6 +654,10 @@ body:not(.user-is-tabbing) a:focus {
     .header__photo {
       margin-top: 20px;
     }
+
+    .header__photo {
+        margin-left: 400px;
+      }
   
     .header__text {
       max-width: 100%;
