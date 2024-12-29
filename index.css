@@ -615,18 +615,17 @@ body:not(.user-is-tabbing) a:focus {
 /* Header layout */
 .header__content {
     display: flex;
-    align-items: center; /* Vertically align text and photo */
+    align-items: center; /* Vertically align photo and text */
     justify-content: space-between; /* Push text to the left and photo to the right */
     flex-wrap: nowrap; /* Prevent stacking */
     padding: 20px; /* Add padding for spacing */
-    gap: 800px; /* Space between text and photo */
+    gap: 20px; /* Reduce the gap between text and photo */
 }
 
 /* Text section */
 .header__text {
     flex: 1; /* Allow text to take up remaining space */
     max-width: 60%; /* Limit the width of the text */
-    margin-right: 20px; /* Add spacing between text and photo */
     color: var(--white); /* Ensure text is readable */
 }
 
@@ -639,6 +638,7 @@ body:not(.user-is-tabbing) a:focus {
     border: 5px solid #fff; /* Add border for better visibility */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
     margin-left: auto; /* Push photo to the far right */
+    transform: translateY(10px); /* Move the photo slightly down */
 }
 
 /* Ensure photo fills the frame */
@@ -651,12 +651,13 @@ body:not(.user-is-tabbing) a:focus {
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 1024px) {
     .header__content {
-        gap: 20px; /* Reduce spacing */
+        gap: 15px; /* Further reduce gap on smaller screens */
     }
 
     .header__photo {
         width: 250px; /* Smaller photo */
         height: 250px;
+        transform: translateY(5px); /* Adjust alignment for smaller screens */
     }
 
     .header__text {
@@ -667,10 +668,16 @@ body:not(.user-is-tabbing) a:focus {
 @media screen and (max-width: 768px) {
     .header__content {
         flex-wrap: nowrap; /* Prevent stacking */
+        gap: 10px; /* Reduce gap further */
     }
 
     .header__photo {
         width: 200px; /* Smaller photo for small screens */
         height: 200px;
+        transform: translateY(0px); /* Reset alignment for small screens */
+    }
+
+    .header__text {
+        max-width: 100%; /* Allow text to take full width */
     }
 }
