@@ -612,17 +612,23 @@ body:not(.user-is-tabbing) a:focus {
     } 
 }
 
-/* Circular photo frame in the header */
-.header__photo {
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: middle;
-    width: 100px;
-    height: 100px;
+/* Style for header layout */
+.header__text-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Larger and right-aligned circular photo */
+  .header__photo {
+    width: 300px; /* Increased size */
+    height: 300px; /* Maintains circular shape */
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 5px solid #fff;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
   }
   
   .header__photo-image {
