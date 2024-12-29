@@ -637,8 +637,8 @@ body:not(.user-is-tabbing) a:focus {
     overflow: hidden; /* Ensure photo fits within circle */
     border: 2px solid #fff; /* Add border for better visibility */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    margin-left: auto; /* Push photo to the far right */
-    margin-top: 500px;
+   /* margin-left: auto; /* Push photo to the far right */
+    margin-top: 500pt;
    
 }
 
