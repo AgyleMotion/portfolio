@@ -490,35 +490,42 @@ body:not(.user-is-tabbing) a:focus {
 
 .carousel {
     position: relative;
-    width: 100%;
+    width: 90%; /* Reduce the container size */
+    max-width: 800px; /* Optional: Set a maximum width */
     overflow: hidden;
-    margin-left: 1rem; /* Moves the container 2rem to the right */
+    margin-left: 2rem; /* Push the container slightly to the right */
+    margin-right: auto; /* Center horizontally if width is reduced */
 }
 
 .carousel__container {
     display: flex;
     transition: transform 0.5s ease-in-out;
     position: relative;
+
+    /* Safari Fix */
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-backface-visibility: hidden; /* Helps prevent flickering */
 }
 
 .work__image-box {
-    flex: 0 0 100%; /* Ensures each image box takes up 100% of the container width */
+    flex: 0 0 100%; /* Each image takes full width */
+    text-align: center;
     display: flex;
-    justify-content: center; /* Center images horizontally */
-    align-items: center; /* Center images vertically */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
 }
 
 .work__image {
-    width: 100%; /* Images scale to fill the container width */
+    width: 100%;
     height: auto; /* Maintain aspect ratio */
-    max-height: 100%; /* Prevent images from overflowing the container */
-    object-fit: cover; /* Ensures images fill their space without distortion */
-    border-radius: 8px; /* Optional: Adds rounded corners to images */
+    object-fit: cover; /* Ensure images fill the box without distortion */
+    border-radius: 8px; /* Optional rounded corners */
 }
 
 .carousel__button {
     position: absolute;
-    top: 45%; /* Adjust vertical positioning of arrows */
+    top: 40%; /* Move arrows slightly up */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -526,19 +533,24 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem;
     cursor: pointer;
     z-index: 10;
+
+    /* Safari Fix */
+    -webkit-user-select: none; /* Prevent selection of buttons in Safari */
+    user-select: none;
 }
 
 .carousel__button--prev {
-    left: 1rem; /* Adjust spacing from the left */
+    left: 1rem;
 }
 
 .carousel__button--next {
-    right: 1rem; /* Adjust spacing from the right */
+    right: 1rem;
 }
 
 .carousel__button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 
 
 /** 
