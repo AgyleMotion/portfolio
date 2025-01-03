@@ -488,6 +488,53 @@ body:not(.user-is-tabbing) a:focus {
     transform: scale(1.2);
 }
 
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel__container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.work__image-box {
+    flex: 0 0 100%; /* Ensure each image takes up 100% of the container width */
+    text-align: center;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel__button--prev {
+    left: 0;
+}
+
+.carousel__button--next {
+    right: 0;
+}
+
+.carousel__button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/** 
+
+
+
+
 .work__image-box {
     margin-bottom: var(--gutter-normal);
 }
@@ -504,7 +551,7 @@ body:not(.user-is-tabbing) a:focus {
         height: 4rem;
     }
 }
-
+***/
 /* --------------------------------------- */
 /* ----- Clients ----- */
 /* --------------------------------------- */
