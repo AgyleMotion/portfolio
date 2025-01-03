@@ -501,14 +501,23 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__image-box {
-    flex: 0 0 100%;
-    text-align: center;
-    margin-left: 2rem; /* Push images slightly to the right */
+    flex: 0 0 100%; /* Ensures each image box takes up 100% of the container width */
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+}
+
+.work__image {
+    width: 100%; /* Images scale to fill the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Prevent images from overflowing the container */
+    object-fit: cover; /* Ensures images fill their space without distortion */
+    border-radius: 8px; /* Optional: Adds rounded corners to images */
 }
 
 .carousel__button {
     position: absolute;
-    top: 45%; /* Move arrows slightly upward */
+    top: 45%; /* Adjust vertical positioning of arrows */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -519,11 +528,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .carousel__button--prev {
-    left: 0.5rem; /* Adjust spacing from the left */
+    left: 1rem; /* Adjust spacing from the left */
 }
 
 .carousel__button--next {
-    right: 0.5rem; /* Adjust spacing from the right */
+    right: 1rem; /* Adjust spacing from the right */
 }
 
 .carousel__button:hover {
