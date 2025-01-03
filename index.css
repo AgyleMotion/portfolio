@@ -525,8 +525,8 @@ body:not(.user-is-tabbing) a:focus {
 
 .carousel__button {
     position: absolute;
-    top: 40%; /* Move arrows slightly up */
-    transform: translateY(-50%);
+    top: 50%; /* Center arrows vertically */
+    transform: translateY(-50%); /* Align perfectly to the vertical center */
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
@@ -540,16 +540,17 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .carousel__button--prev {
-    left: 1rem;
+    left: 1rem; /* Distance from the left edge */
 }
 
 .carousel__button--next {
-    right: 1rem;
+    right: 1rem; /* Distance from the right edge */
 }
 
 .carousel__button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 
 
 
