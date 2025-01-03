@@ -497,18 +497,18 @@ body:not(.user-is-tabbing) a:focus {
 .carousel__container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    position: relative;
 }
 
 .work__image-box {
-    margin-bottom: var(--gutter-normal);
-    flex: 1; /* Ensure each image takes up 100% of the container width */
-    margin: 0 0 0 10rem;
-  
+    flex: 0 0 100%;
+    text-align: center;
+    margin-left: 2rem; /* Push images slightly to the right */
 }
 
 .carousel__button {
     position: absolute;
-    top: 50%;
+    top: 45%; /* Move arrows slightly upward */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -519,11 +519,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .carousel__button--prev {
-    left: 0;
+    left: 0.5rem; /* Adjust spacing from the left */
 }
 
 .carousel__button--next {
-    right: 0;
+    right: 0.5rem; /* Adjust spacing from the right */
 }
 
 .carousel__button:hover {
