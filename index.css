@@ -501,10 +501,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__image-box {
-    flex: 0 0 100%;
+    flex: 0 0 60%;
     text-align: center;
-    margin-left: 6rem; /* Push images slightly to the right */
+    margin-left: 4rem; /* Push images slightly to the right */
 }
+
 
 .carousel__button {
     position: absolute;
