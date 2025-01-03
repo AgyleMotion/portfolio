@@ -492,6 +492,7 @@ body:not(.user-is-tabbing) a:focus {
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-left: 2rem; /* Moves the container 2rem to the right */
 }
 
 .carousel__container {
