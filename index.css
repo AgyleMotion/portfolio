@@ -501,9 +501,9 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__image-box {
-    flex: 0 0 60%;
+    flex: 0 0 100%;
     text-align: center;
-    margin-left: 4rem; /* Push images slightly to the right */
+    margin-left: 6rem; /* Push images slightly to the right */
 }
 
 .carousel__button {
@@ -537,7 +537,22 @@ body:not(.user-is-tabbing) a:focus {
 
 
 
+.work__image-box {
+    margin-bottom: var(--gutter-normal);
+}
 
+@media(min-width: 901px) {
+    .work__image-box {
+        flex: 1;
+        margin: 0 0 0 10rem;
+    }
+}
+
+@media(max-width: 900px) {
+    .work__code {
+        height: 4rem;
+    }
+}
 ***/
 /* --------------------------------------- */
 /* ----- Clients ----- */
