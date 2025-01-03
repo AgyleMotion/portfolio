@@ -501,11 +501,10 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__image-box {
-    flex: 0 0 60%;
+    flex: 0 0 100%;
     text-align: center;
-    margin-left: 4rem; /* Push images slightly to the right */
+    margin-left: 2rem; /* Push images slightly to the right */
 }
-
 
 .carousel__button {
     position: absolute;
@@ -530,7 +529,6 @@ body:not(.user-is-tabbing) a:focus {
 .carousel__button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
-
 
 
 /** 
