@@ -492,7 +492,7 @@ body:not(.user-is-tabbing) a:focus {
     position: relative;
     width: 100%;
     overflow: hidden;
-    margin-left: 2rem; /* Moves the container 2rem to the right */
+    margin-left: 1rem; /* Moves the container 2rem to the right */
 }
 
 .carousel__container {
@@ -509,11 +509,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__image {
-    width: 90%; /* Images scale to fill the container width */
+    width: 100%; /* Images scale to fill the container width */
     height: auto; /* Maintain aspect ratio */
     max-height: 100%; /* Prevent images from overflowing the container */
     object-fit: cover; /* Ensures images fill their space without distortion */
-    border-radius: 16px; /* Optional: Adds rounded corners to images */
+    border-radius: 8px; /* Optional: Adds rounded corners to images */
 }
 
 .carousel__button {
