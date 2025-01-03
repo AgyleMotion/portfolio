@@ -517,11 +517,14 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__image {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure images fill the box without distortion */
+    width: 80%; /* Scale the image down to 80% of its container's width */
+    max-width: 500px; /* Limit the maximum width to 500px */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image fills its container without distortion */
     border-radius: 8px; /* Optional rounded corners */
+    margin: 0 auto; /* Center the image if it doesn't fill the container */
 }
+
 
 .carousel__button {
     position: absolute;
