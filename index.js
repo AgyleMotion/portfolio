@@ -42,24 +42,29 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const container = document.querySelector('.carousel__container');
-const images = document.querySelectorAll('.work__image-box');
-const prevButton = document.querySelector('.carousel__button--prev');
-const nextButton = document.querySelector('.carousel__button--next');
+// Select all carousel containers
+const carousels = document.querySelectorAll('.carousel');
 
-let currentIndex = 0;
+carousels.forEach((carousel) => {
+  const container = carousel.querySelector('.carousel__container');
+  const images = carousel.querySelectorAll('.work__image-box');
+  const prevButton = carousel.querySelector('.carousel__button--prev');
+  const nextButton = carousel.querySelector('.carousel__button--next');
 
-function updateCarousel() {
+  let currentIndex = 0;
+
+  function updateCarousel() {
     const offset = -currentIndex * 100; // Calculate translation percentage
     container.style.transform = `translateX(${offset}%)`;
-}
+  }
 
-prevButton.addEventListener('click', () => {
+  prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
     updateCarousel();
-});
+  });
 
-nextButton.addEventListener('click', () => {
+  nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
     updateCarousel();
+  });
 });
