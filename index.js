@@ -42,17 +42,16 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Select all carousels
-const carousels = document.querySelectorAll('.work__box');
 
-carousels.forEach((workBox) => {
+
+document.querySelectorAll('.work__box').forEach((workBox) => {
   const carouselContainer = workBox.querySelector('.carousel__container');
   const prevButton = workBox.querySelector('.carousel__button--prev');
   const nextButton = workBox.querySelector('.carousel__button--next');
 
   let scrollAmount = 0; // Initialize scroll position
-  const imageWidth = 300; // Adjust based on your image width
-  const visibleImages = 3; // Adjust based on how many images are visible at once
+  const imageWidth = carouselContainer.querySelector('.work__image-box').offsetWidth;
+  const visibleImages = Math.floor(carouselContainer.offsetWidth / imageWidth);
 
   // Scroll to the next set of images
   nextButton.addEventListener('click', () => {
