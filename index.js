@@ -58,6 +58,7 @@ carousels.forEach((carousel) => {
     container.style.transform = `translateX(${offset}%)`;
   }
 
+  // Add event listeners for the current carousel
   prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
     updateCarousel();
