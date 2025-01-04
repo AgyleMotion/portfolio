@@ -42,33 +42,24 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const container = document.querySelector('.carousel__container');
+const images = document.querySelectorAll('.work__image-box');
+const prevButton = document.querySelector('.carousel__button--prev');
+const nextButton = document.querySelector('.carousel__button--next');
 
+let currentIndex = 0;
 
-document.querySelectorAll('.work__box').forEach((workBox) => {
-  const carouselContainer = workBox.querySelector('.carousel__container');
-  const prevButton = workBox.querySelector('.carousel__button--prev');
-  const nextButton = workBox.querySelector('.carousel__button--next');
+function updateCarousel() {
+    const offset = -currentIndex * 100; // Calculate translation percentage
+    container.style.transform = `translateX(${offset}%)`;
+}
 
-  let scrollAmount = 0; // Initialize scroll position
-  const imageWidth = carouselContainer.querySelector('.work__image-box').offsetWidth;
-  const visibleImages = Math.floor(carouselContainer.offsetWidth / imageWidth);
-
-  // Scroll to the next set of images
-  nextButton.addEventListener('click', () => {
-    scrollAmount += imageWidth * visibleImages;
-    carouselContainer.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
-  });
-
-  // Scroll to the previous set of images
-  prevButton.addEventListener('click', () => {
-    scrollAmount -= imageWidth * visibleImages;
-    carouselContainer.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
-  });
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+    updateCarousel();
 });
 
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+});
