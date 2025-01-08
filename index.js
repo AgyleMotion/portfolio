@@ -47,7 +47,7 @@ const carousels = document.querySelectorAll('.carousel');
 
 carousels.forEach((carousel) => {
   const container = carousel.querySelector('.carousel__container');
-  const images = carousel.querySelectorAll('.work__image-box');
+  const images = carousel.querySelectorAll('.work__image-box, .work__video-box');
   const prevButton = carousel.querySelector('.carousel__button--prev');
   const nextButton = carousel.querySelector('.carousel__button--next');
 
