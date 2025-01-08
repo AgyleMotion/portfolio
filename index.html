@@ -179,14 +179,17 @@
               <div class="work__text">
                 <h3> Fluid-Solid Interaction Simulation </h3>
                 <p>
-                   Simulation of highly elastic human red blood cells in torodial geometry 
+                   Simulation of highly elastic human red blood cells (RBCs) in torodial geometry 
                    
                 </p>
-                <ul class="work__list">
+                <ul class="work__list">          
                   <li> Coupled Fluid-Solid Interaction </li>
-                  <li> RBC is modelled with constitute model </Li>
-                  <li> Injecting Human RBCs </li>
-                  <li> Fluid solid interaction models </li>
+                  <li> No-slip condition is enforced at the geometry wall using the ghost-node
+                    IBM </li>
+                  <li> Finite element is used to compute the elastic tension &#120591;&#8321;, &#120591;&#8322; in each element of RBC elastic membrane</li>
+                 <li> Each cell is discretized using Delaunay triangles Ne = 5120 elements</li>
+                  <li> RBC is modelled with constitutive hyperelastic model</Li>
+                  <li> RBCs are injected in torodial geometry </li>
                   <li> Simulation performed on Amarel super computer </li>
                 </ul>
   
