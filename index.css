@@ -484,7 +484,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .header__one-line {
-  white-space: nowrap;        /* 🔒 force single line */
+  
   overflow: hidden;           /* prevent spill */
   text-overflow: ellipsis;    /* optional: ... if screen is too small */
   font-size: 1.9rem;
@@ -501,7 +501,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width:900px) {
   .header {
     text-align: center;
   }
