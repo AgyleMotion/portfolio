@@ -471,6 +471,15 @@ body:not(.user-is-tabbing) a:focus {
   color: rgba(255, 255, 255, 0.88);
 }
 
+.header__degrees {
+    margin-top: 1.2rem;
+    font-size: 1.7rem;
+    color: var(--white-1);
+    opacity: 0.85;
+    letter-spacing: 0.05em;
+}
+
+
 /* Button polish */
 .header__text .btn {
   font-size: 1.6rem;
