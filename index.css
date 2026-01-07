@@ -484,20 +484,25 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .header__one-line {
-  white-space: normal;   /* allow wrapping */
-  overflow: visible;
-  text-overflow: clip;
-
   font-size: 1.6rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.9;
   line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  opacity: 0.9;
 }
 
+/* Force first degree to stay on one line */
+.header__one-line .first-line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Force second degree onto next line */
 .header__one-line .next-line {
   display: block;
+  margin-top: 0.4rem;
 }
+
 
 
 /* Button polish */
