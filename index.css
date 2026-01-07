@@ -435,7 +435,7 @@ body:not(.user-is-tabbing) a:focus {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 72rem;
+  max-width: 700px;
   color: var(--white);
 }
 
@@ -452,10 +452,10 @@ body:not(.user-is-tabbing) a:focus {
 /* Subtitle (optional if you add it in HTML) */
 .header__subtitle {
   font-family: 'Jost', sans-serif;
-  font-size: 1.5rem;   
+  font-size: 1.8rem;   
   font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
   color: rgba(255, 255, 255, 0.75);
   margin: 0 0 2.8rem;
 }
