@@ -13,7 +13,7 @@
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/Jost-Regular.ttf') format('woff');
+    src: url('./fonts/Jost-Regular.ttf') format('truetype');
 }
 
 * {
@@ -407,55 +407,96 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Header ----- */
 /* --------------------------------------- */
 
-.header{
-  /* overlay (dark layer) + your background image */
+/* --------------------------------------- */
+/* ----- Header ----- */
+/* --------------------------------------- */
+
+.header {
   background:
     linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
     url('./images/Abstract_wave.jpg');
-
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   font-size: var(--font-size-normal);
+  position: relative; /* needed for absolute text positioning */
 }
 
-/* Center the header content nicely */
-.header__content{
+/* Keep row normal (no flex centering here) */
+.header__content {
   min-height: 100vh;
-  display: flex;
-  align-items: center;         /* vertical center */
-  justify-content: flex-start; /* keep it left */
-  padding: 0 20px;
+  position: relative; /* anchor for absolutely positioned text */
+  padding: 0 var(--gutter-medium);
 }
 
-/* Keep ONE header__text rule (no absolute positioning) */
-.header__text{
-  max-width: 70rem;
+/* Your preferred absolute centering */
+.header__text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 72rem;
   color: var(--white);
 }
 
-/* Make the hero paragraph readable + not huge */
-.header__text p{
-  margin: 1.5rem 0 3.5rem;
-  max-width: 60rem;
+/* Name */
+.heading-primary {
+  font-family: 'Hk Grotesk', sans-serif;
+  font-size: clamp(3.6rem, 5vw, 5.2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.2rem;
+}
+
+/* Subtitle (optional if you add it in HTML) */
+.header__subtitle {
   font-family: 'Jost', sans-serif;
-  font-size: 2.0rem;
-  line-height: 1.6;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 2.8rem;
+}
+
+/* Bio paragraph */
+.header__text p,
+.header__bio {
+  margin: 0 0 3.2rem;
+  max-width: 68ch;
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Button polish */
+.header__text .btn {
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
 }
 
 /* Mobile */
-@media (max-width: 500px){
-  .header{
+@media (max-width: 600px) {
+  .header {
     text-align: center;
   }
 
-  .header__content{
-    justify-content: center;
+  .header__content {
+    padding: 0 var(--gutter-normal);
   }
 
-  .header__text{
-    max-width: 100%;
+  .header__text {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4rem);
+  }
+
+  .header__text p,
+  .header__bio {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
