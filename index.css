@@ -440,8 +440,42 @@ body:not(.user-is-tabbing) a:focus {
   letter-spacing: 0.05em;
 }
 
+.header__skills {
+  margin-top: 2.2rem;
+}
+
+.header__skills-title {
+  margin: 0 0 0.8rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.skills__item {
+  padding: 0.55rem 1.0rem;
+  border: 1px solid rgba(70, 66, 208, 0.55); /* matches your --pink vibe */
+  border-radius: 999px;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+
 /* Mobile header layout */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .header {
     text-align: center;
   }
@@ -464,6 +498,9 @@ body:not(.user-is-tabbing) a:focus {
   /* Allow first line to wrap on small screens */
   .header__one-line .first-line {
     white-space: normal;
+  }
+  .skills {
+    justify-content: center;
   }
 }
 
