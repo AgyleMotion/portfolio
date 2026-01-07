@@ -484,15 +484,17 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .header__one-line {
-  
-  overflow: hidden;           /* prevent spill */
-  text-overflow: ellipsis;    /* optional: ... if screen is too small */
-  font-size: 1.9rem;
-  letter-spacing: 0.12em;
+  white-space: normal;   /* allow wrapping */
+  overflow: visible;
+  text-overflow: clip;
+
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.9;
-  max-width: 100%;
+  line-height: 1.6;
 }
+
 
 /* Button polish */
 .header__text .btn {
