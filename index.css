@@ -406,18 +406,38 @@ body:not(.user-is-tabbing) a:focus {
 .header {
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
         url('./images/Abstract_wave.jpg');
-    height: 100vh;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     font-size: var(--font-size-normal);
 }
 
-.header__text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.header__content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;   /* vertical centering */
 }
+
+.header__text {
+  max-width: 680px;      /* KEY: limits line length */
+}
+
+.header__subtitle {
+  margin: 1.2rem 0 2rem;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.header__bio {
+  margin: 0 0 3rem;
+  font-size: 1.8rem;     /* smaller than subtitle */
+  line-height: 1.75;
+  max-width: 60ch;       /* readable paragraph width */
+  opacity: 0.85;
+}
+
 
 .header__text p {
     margin: 1.5rem 0 3.5rem;
