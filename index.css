@@ -402,7 +402,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Header ----- */
 /* --------------------------------------- */
-/*
+
 .header {
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
         url('./images/Abstract_wave.jpg');
@@ -412,23 +412,8 @@ body:not(.user-is-tabbing) a:focus {
     background-attachment: fixed;
     font-size: var(--font-size-normal);
 }
-*/
-.header {
-  background: url('./images/Abstract_wave.jpg');
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-size: var(--font-size-normal);
-}
 
-.header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.60);  /* overlay strength */
-  z-index: 0;
-}
+
 
 .header__content {
   position: relative;
