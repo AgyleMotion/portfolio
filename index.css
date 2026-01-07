@@ -455,7 +455,7 @@ body:not(.user-is-tabbing) a:focus {
   font-size: 1.8rem;   
   font-weight: 400;
   letter-spacing: 0.15em;
-  text-transform: capitalize;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.75);
   margin: 0 0 2.8rem;
 }
