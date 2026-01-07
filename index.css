@@ -483,6 +483,16 @@ body:not(.user-is-tabbing) a:focus {
     letter-spacing: 0.05em;
 }
 
+.header__one-line {
+  white-space: nowrap;        /* 🔒 force single line */
+  overflow: hidden;           /* prevent spill */
+  text-overflow: ellipsis;    /* optional: ... if screen is too small */
+  font-size: 1.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  max-width: 100%;
+}
 
 /* Button polish */
 .header__text .btn {
