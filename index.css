@@ -521,7 +521,15 @@ body:not(.user-is-tabbing) a:focus {
     margin-left: auto;
     margin-right: auto;
   }
+
+  
+  .header__one-line {
+    white-space: normal;   
+    line-height: 1.6;
+  }
+  
 }
+
 
 /* --------------------------------------- */
 /* ----- Work ----- */
