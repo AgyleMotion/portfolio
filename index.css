@@ -495,6 +495,10 @@ body:not(.user-is-tabbing) a:focus {
   line-height: 1.6;
 }
 
+.header__one-line .next-line {
+  display: block;
+}
+
 
 /* Button polish */
 .header__text .btn {
@@ -631,9 +635,6 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
 }
-
-
-
 
 
 .carousel__button {
@@ -802,20 +803,4 @@ body:not(.user-is-tabbing) a:focus {
     } 
 }
 
-/* Header layout */
-.header__content {
-    display: flex;
-    align-items: center; /* Vertically align photo and text */
-    justify-content: space-between; /* Push text to the left and photo to the right */
-    flex-wrap: nowrap; /* Prevent stacking */
-    padding: 20px; /* Add padding for spacing */
-    gap: 20px; /* Reduce the gap between text and photo */
-}
-
-/* Text section */
-.header__text {
-    flex: 1; /* Allow text to take up remaining space */
-    max-width: 60%; /* Limit the width of the text */
-    color: var(--white); /* Ensure text is readable */
-}
 
