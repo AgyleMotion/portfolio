@@ -84,32 +84,28 @@
           <!-- project Cylinder Hex Mesh generator -->
             <div class="work__box">
               <div class="work__text">
-                <h3>Cylinder Hex Mesh Generator</h3>
+  <h3>Cylinder Hex Mesh Generator</h3>
 
-    <p>
-      A C++ tool for automated generation of structured hexahedral O-grid meshes
-      for cylindrical geometries. The tool produces volume meshes and boundary
-      surfaces with consistent topology and boundary labeling, enabling direct
-      use in CFD and solid finite element workflows.
-    </p>
+  <p class="work__summary">
+    C++ tool that generates structured hexahedral O-grid meshes for cylindrical geometries,
+    exporting solver-ready meshes and boundary zones for CFD and solid FEA workflows.
+  </p>
 
-    <ul class="work__list">
-      <li>Automatic structured hexahedral O-grid mesh generation for cylindrical domains</li>
-      <li>Extraction of inlet, outlet, and wall boundary surfaces</li>
-      <li>VTK export of volume mesh and boundary surfaces for visualization</li>
-      <li>Gmsh (.msh) export for CFD and FEM solvers supporting Gmsh meshes</li>
-      <li>ANSYS Fluent–compatible (.msh) export with predefined boundary zones</li>
-      <li>ANSYS Mechanical (Static Structural) compatibility via Workbench framework</li>
-    </ul>
+  <div class="work__meta">
+    <span class="work__pill">C++</span>
+    <span class="work__pill">Mesh Generation</span>
+    <span class="work__pill">VTK</span>
+    <span class="work__pill">Gmsh</span>
+    <span class="work__pill">ANSYS Fluent</span>
+    <span class="work__pill">ANSYS Mechanical</span>
+  </div>
 
-    <p><strong>Use Cases</strong></p>
-    <ul class="work__list">
-      <li>Internal pipe and duct flow simulations</li>
-      <li>Axisymmetric and fully 3D cylindrical CFD problems</li>
-      <li>Solid mechanics and structural analysis of cylindrical components</li>
-      <li>Benchmarking and verification of CFD/FEM solvers</li>
-      <li>Rapid mesh generation for parametric studies</li>
-      </ul>
+  <ul class="work__bullets">
+    <li>Automatic structured hex O-grid mesh generation</li>
+    <li>Inlet / outlet / wall surface extraction and labeling</li>
+    <li>Exports: <strong>VTK</strong> (viz), <strong>Gmsh .msh</strong>, <strong>Fluent .msh</strong> with boundary zones</li>
+    <li>Use cases: pipe/duct flow, solver benchmarking, parametric studies</li>
+  </ul>
   
                 <div class="work__links">
                   <a href="https://github.com/AgyleMotion/Cylinder-Hex-Mesh-Generator.git" class="link__text">
