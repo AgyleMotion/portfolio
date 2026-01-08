@@ -805,3 +805,28 @@ body:not(.user-is-tabbing) a:focus {
   }
 }
 
+/* Prominent carousel arrows */
+.carousel__button {
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 999px;
+  font-size: 3.0rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(70, 66, 208, 0.25);
+  border: 1px solid rgba(70, 66, 208, 0.6);
+  backdrop-filter: blur(6px);
+
+  opacity: 0.95;
+}
+
+.carousel__button--prev { left: 1.6rem; }
+.carousel__button--next { right: 1.6rem; }
+
+.carousel__button:hover {
+  background: rgba(70, 66, 208, 0.45);
+  transform: translateY(-50%) scale(1.08);
+}
