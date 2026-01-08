@@ -1,11 +1,10 @@
 /* -----------------------------------------
-  Have focus outline only for keyboard users 
- ---------------------------------------- */
+  Focus outline only for keyboard users
+----------------------------------------- */
 
 const handleFirstTab = (e) => {
   if (e.key === "Tab") {
     document.body.classList.add("user-is-tabbing");
-
     window.removeEventListener("keydown", handleFirstTab);
     window.addEventListener("mousedown", handleMouseDownOnce);
   }
@@ -13,7 +12,6 @@ const handleFirstTab = (e) => {
 
 const handleMouseDownOnce = () => {
   document.body.classList.remove("user-is-tabbing");
-
   window.removeEventListener("mousedown", handleMouseDownOnce);
   window.addEventListener("keydown", handleFirstTab);
 };
@@ -21,70 +19,84 @@ const handleMouseDownOnce = () => {
 window.addEventListener("keydown", handleFirstTab);
 
 /* -----------------------------------------
-  Back to top button
- ---------------------------------------- */
+  Back to Top Button
+----------------------------------------- */
 
 const backToTopButton = document.querySelector(".back-to-top");
-let isBackToTopRendered = false;
 
-const alterStyles = (rendered) => {
+function updateBackToTop() {
   if (!backToTopButton) return;
-  backToTopButton.style.visibility = rendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = rendered ? 1 : 0;
-  backToTopButton.style.transform = rendered ? "scale(1)" : "scale(0)";
-};
 
-window.addEventListener("scroll", () => {
   if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(true);
+    backToTopButton.style.visibility = "visible";
+    backToTopButton.style.opacity = "1";
+    backToTopButton.style.transform = "scale(1)";
   } else {
-    isBackToTopRendered = false;
-    alterStyles(false);
+    backToTopButton.style.visibility = "hidden";
+    backToTopButton.style.opacity = "0";
+    backToTopButton.style.transform = "scale(0)";
   }
-});
+}
+
+window.addEventListener("scroll", updateBackToTop);
 
 /* -----------------------------------------
-  Carousels (click-only, supports images + videos)
+  Carousels (CLICK ONLY)
+  - Images + Videos supported
   - No autoplay
-  - Works with multiple carousels
-  - Safe if a carousel has no buttons (single image)
- ---------------------------------------- */
+  - No looping
+----------------------------------------- */
 
-const carousels = document.querySelectorAll(".carousel");
-
-carousels.forEach((carousel) => {
+document.querySelectorAll(".carousel").forEach((carousel) => {
   const container = carousel.querySelector(".carousel__container");
-  const slides = carousel.querySelectorAll(".work__image-box, .work__video-box");
+  const slides = carousel.querySelectorAll(
+    ".work__image-box, .work__video-box"
+  );
   const prevButton = carousel.querySelector(".carousel__button--prev");
   const nextButton = carousel.querySelector(".carousel__button--next");
 
-  // If this carousel doesn't have the expected pieces (e.g., single image, no arrows), skip it safely.
+  // Skip carousels without arrows (single-image ones)
   if (!container || slides.length === 0 || !prevButton || !nextButton) return;
 
   let currentIndex = 0;
 
-  function pauseVideosInCarousel() {
-    container.querySelectorAll("video").forEach((v) => v.pause());
+  // Ensure layout consistency
+  container.style.display = "flex";
+  container.style.transition = "transform 0.35s ease";
+
+  slides.forEach((slide) => {
+    slide.style.minWidth = "100%";
+    slide.style.flexShrink = "0";
+  });
+
+  function pauseVideos() {
+    container.querySelectorAll("video").forEach((video) => video.pause());
   }
 
   function updateCarousel() {
-    // This relies on CSS making each slide take 100% width of the carousel.
-    const offset = -currentIndex * 100;
-    container.style.transform = `translateX(${offset}%)`;
+    const slideWidth = carousel.getBoundingClientRect().width;
+    container.style.transform = `translateX(-${
+      currentIndex * slideWidth
+    }px)`;
   }
 
   prevButton.addEventListener("click", () => {
-    currentIndex = currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
-    pauseVideosInCarousel();
-    updateCarousel();
+    if (currentIndex > 0) {
+      currentIndex--;
+      pauseVideos();
+      updateCarousel();
+    }
   });
 
   nextButton.addEventListener("click", () => {
-    currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
-    pauseVideosInCarousel();
-    updateCarousel();
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+      pauseVideos();
+      updateCarousel();
+    }
   });
+
+  window.addEventListener("resize", updateCarousel);
 
   // Initialize position
   updateCarousel();
