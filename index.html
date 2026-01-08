@@ -74,16 +74,84 @@
 </header>
 
 
-
   <main role="main">
-
-    <!-- ***** Work ***** -->
-
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+        <h2>Projects</h2>
         <div class="work__boxes">
 
+        
+          <!-- project Cylinder Hex Mesh generator -->
+            <div class="work__box">
+              <div class="work__text">
+                <h3>Cylinder Hex Mesh Generator</h3>
+
+    <p>
+      A C++ tool for automated generation of structured hexahedral O-grid meshes
+      for cylindrical geometries. The tool produces volume meshes and boundary
+      surfaces with consistent topology and boundary labeling, enabling direct
+      use in CFD and solid finite element workflows.
+    </p>
+
+    <ul class="work__list">
+      <li>Automatic structured hexahedral O-grid mesh generation for cylindrical domains</li>
+      <li>Extraction of inlet, outlet, and wall boundary surfaces</li>
+      <li>VTK export of volume mesh and boundary surfaces for visualization</li>
+      <li>Gmsh (.msh) export for CFD and FEM solvers supporting Gmsh meshes</li>
+      <li>ANSYS Fluent–compatible (.msh) export with predefined boundary zones</li>
+      <li>ANSYS Mechanical (Static Structural) compatibility via Workbench framework</li>
+    </ul>
+
+    <p><strong>Use Cases</strong></p>
+    <ul class="work__list">
+      <li>Internal pipe and duct flow simulations</li>
+      <li>Axisymmetric and fully 3D cylindrical CFD problems</li>
+      <li>Solid mechanics and structural analysis of cylindrical components</li>
+      <li>Benchmarking and verification of CFD/FEM solvers</li>
+      <li>Rapid mesh generation for parametric studies</li>
+      </ul>
+  
+                <div class="work__links">
+                  <a href="https://github.com/AgyleMotion/Cylinder-Hex-Mesh-Generator.git" class="link__text">
+                    View GitHub repository <span>&rarr;</span>
+                  </a>
+  
+                </div>
+  
+              </div>
+  
+              <div class="carousel">
+                <div class="carousel__container">
+                  <div class="work__image-box">
+                    <img src="./images/toolcpp_1.png" class="work__image" alt="Project 3" />
+                  </div>
+                  <div class="work__image-box">
+                    <img src="./images/toolcpp_2.png" class="work__image" alt="Project 3" />
+                  </div>
+  
+                  <div class="work__image-box">
+                    <img src="./images/toolcpp_3.png" class="work__image" alt="Project 3" />
+                  </div>
+                  <div class="work__image-box">
+                    <img src="./images/toolcpp_4.png" class="work__image" alt="Project 3" />
+                  </div>
+                  <div class="work__image-box">
+                    <img src="./images/toolcpp_5.png" class="work__image" alt="Project 3" />
+                  </div>
+                  <div class="work__image-box">
+                    <img src="./images/toolcpp_6.png" class="work__image" alt="Project 3" />
+                  </div>
+                  <div class="work__image-box">
+                    <img src="./images/toolcpp_7.png" class="work__image" alt="Project 3" />
+                  </div>
+                </div>
+                <button class="carousel__button carousel__button--prev">&#10096;</button>
+                <button class="carousel__button carousel__button--next">&#10097;</button>
+              </div>
+             
+            </div>
+          
+         
           <!-- Each div with the work__box class is a project. -->
 
           <div class="work__box">
