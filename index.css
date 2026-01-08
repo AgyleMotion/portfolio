@@ -383,35 +383,46 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* Header */
 /* --------------------------------------- */
+/* --------------------------------------- */
+/* Header */
+/* --------------------------------------- */
 .header {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
     url('./images/Abstract_wave.jpg');
-  min-height: 85vh;
-  padding-bottom: 4rem;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-size: var(--font-size-normal);
+
+  /* Hero height but no dead space */
+  min-height: 85vh;
+
+  /* IMPORTANT: let content define the bottom */
+  padding: 8rem 0 6rem;
+
   position: relative;
+  font-size: var(--font-size-normal);
 }
 
-/* IMPORTANT: don't force extra height here */
 .header__content {
-  min-height: auto;
-  position: relative;
+  /* Use flex instead of absolute positioning */
+  min-height: 85vh;
+  display: flex;
+  align-items: center;   /* vertical */
+  justify-content: flex-start; /* left aligned */
   padding: 0 var(--gutter-medium);
 }
 
 .header__text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  /* remove absolute positioning */
+  position: static;
+  transform: none;
   max-width: 700px;
   color: var(--white);
 }
 
+/* Bio */
 .header__bio {
-  margin: 0 0 3.2rem;
+  margin: 0 0 2.4rem;
   max-width: 62ch;
   font-family: 'Jost', sans-serif;
   font-size: 1.8rem;
@@ -419,12 +430,14 @@ body:not(.user-is-tabbing) a:focus {
   color: rgba(255, 255, 255, 0.88);
 }
 
+/* Degrees */
 .header__one-line {
   font-size: 1.6rem;
   line-height: 1.6;
   letter-spacing: 0.04em;
   text-transform: none;
   opacity: 0.9;
+  margin: 0 0 1.8rem;
 }
 
 .header__one-line .first-line {
@@ -442,7 +455,7 @@ body:not(.user-is-tabbing) a:focus {
   letter-spacing: 0.05em;
 }
 
-/* Skills under header */
+/* Skills */
 .header__skills {
   margin-top: 2.2rem;
 }
@@ -476,25 +489,17 @@ body:not(.user-is-tabbing) a:focus {
   backdrop-filter: blur(2px);
 }
 
-/* Mobile header layout */
-@media (max-width: 600px) {
+/* Mobile */
+@media (max-width: 900px) {
   .header {
     text-align: center;
+    padding: 7rem 0 5rem;
   }
 
   .header__content {
-    padding: 0 var(--gutter-normal);
-  }
-
-  .header__text {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 4rem);
-  }
-
-  .header__bio {
-    margin-left: auto;
-    margin-right: auto;
+    min-height: auto;          /* allow header to hug content */
+    justify-content: center;
+    padding: 0 var(--gutter-small);
   }
 
   .header__one-line .first-line {
@@ -505,6 +510,7 @@ body:not(.user-is-tabbing) a:focus {
     justify-content: center;
   }
 }
+
 
 /* --------------------------------------- */
 /* Work / Projects */
@@ -792,3 +798,10 @@ body:not(.user-is-tabbing) a:focus {
     padding: var(--gutter-medium) 0;
   }
 }
+
+@media (max-width: 900px) {
+  .header {
+    background-attachment: scroll; /* iOS fix */
+  }
+}
+
