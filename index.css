@@ -834,3 +834,13 @@ body:not(.user-is-tabbing) a:focus {
     max-width: 100%;
   }
 }
+
+/* Reduce space between header and projects */
+.header {
+  padding-bottom: 6rem;
+}
+
+.header + section {
+  padding-top: 6rem;
+}
+
