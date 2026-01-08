@@ -47,57 +47,51 @@ window.addEventListener("scroll", updateBackToTop);
   - No looping
 ----------------------------------------- */
 
-document.querySelectorAll(".carousel").forEach((carousel) => {
+/* -----------------------------------------
+  Carousels – CLICK ONLY (SAFE FOR ALL)
+----------------------------------------- */
+
+document.querySelectorAll(".carousel__button").forEach((button) => {
+  const carousel = button.closest(".carousel");
   const container = carousel.querySelector(".carousel__container");
   const slides = carousel.querySelectorAll(
     ".work__image-box, .work__video-box"
   );
-  const prevButton = carousel.querySelector(".carousel__button--prev");
-  const nextButton = carousel.querySelector(".carousel__button--next");
 
-  // Skip carousels without arrows (single-image ones)
-  if (!container || slides.length === 0 || !prevButton || !nextButton) return;
+  if (!container || slides.length === 0) return;
 
-  let currentIndex = 0;
-
-  // Ensure layout consistency
-  container.style.display = "flex";
-  container.style.transition = "transform 0.35s ease";
-
-  slides.forEach((slide) => {
-    slide.style.minWidth = "100%";
-    slide.style.flexShrink = "0";
-  });
-
-  function pauseVideos() {
-    container.querySelectorAll("video").forEach((video) => video.pause());
+  // Initialize index per carousel
+  if (carousel.dataset.index === undefined) {
+    carousel.dataset.index = "0";
   }
 
-  function updateCarousel() {
-    const slideWidth = carousel.getBoundingClientRect().width;
-    container.style.transform = `translateX(-${
-      currentIndex * slideWidth
-    }px)`;
-  }
+  const pauseVideos = () => {
+    container.querySelectorAll("video").forEach(v => v.pause());
+  };
 
-  prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      pauseVideos();
-      updateCarousel();
+  const update = () => {
+    const index = Number(carousel.dataset.index);
+    const width = carousel.getBoundingClientRect().width;
+    container.style.transform = `translateX(-${index * width}px)`;
+  };
+
+  button.addEventListener("click", () => {
+    let index = Number(carousel.dataset.index);
+
+    if (button.classList.contains("carousel__button--next")) {
+      if (index < slides.length - 1) index++;
     }
+
+    if (button.classList.contains("carousel__button--prev")) {
+      if (index > 0) index--;
+    }
+
+    carousel.dataset.index = index.toString();
+    pauseVideos();
+    update();
   });
 
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < slides.length - 1) {
-      currentIndex++;
-      pauseVideos();
-      updateCarousel();
-    }
-  });
-
-  window.addEventListener("resize", updateCarousel);
-
-  // Initialize position
-  updateCarousel();
+  window.addEventListener("resize", update);
+  update();
 });
+
