@@ -830,3 +830,19 @@ body:not(.user-is-tabbing) a:focus {
   background: rgba(70, 66, 208, 0.45);
   transform: translateY(-50%) scale(1.08);
 }
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel__container {
+  display: flex;
+  transition: transform 0.35s ease;
+}
+
+.work__image-box,
+.work__video-box {
+  min-width: 100%;
+  flex: 0 0 100%;
+}
+
