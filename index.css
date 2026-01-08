@@ -42,7 +42,6 @@
   --white-1: #e5e5e6da;
 
   --container-max-width: 1180px;
-  --container-normal-width: 800px;
   --container-medium-width: 700px;
   --container-small-width: 500px;
 
@@ -103,6 +102,7 @@ body {
   }
 }
 
+/* Default spacing between site sections */
 section {
   padding: var(--gutter-huge) 0;
   border-bottom: var(--border-light);
@@ -136,7 +136,7 @@ h3 {
 
 h2 {
   font-size: var(--font-size-large);
-  margin-bottom: var(--gutter-medium);
+  margin-bottom: var(--gutter-medium); /* global default */
 }
 
 h2::after {
@@ -395,9 +395,10 @@ body:not(.user-is-tabbing) a:focus {
   position: relative;
 }
 
+/* IMPORTANT: don't force extra height here */
 .header__content {
-  min-height: 100vh;
-  position: relative; /* anchor for absolute text */
+  min-height: auto;
+  position: relative;
   padding: 0 var(--gutter-medium);
 }
 
@@ -428,12 +429,12 @@ body:not(.user-is-tabbing) a:focus {
 
 .header__one-line .first-line {
   display: block;
-  white-space: nowrap; /* keep first degree on one line (desktop) */
+  white-space: nowrap;
 }
 
 .header__one-line .next-line {
   display: block;
-  margin-top: 0.4rem; /* second degree always next line */
+  margin-top: 0.4rem;
 }
 
 .header__text .btn {
@@ -441,6 +442,7 @@ body:not(.user-is-tabbing) a:focus {
   letter-spacing: 0.05em;
 }
 
+/* Skills under header */
 .header__skills {
   margin-top: 2.2rem;
 }
@@ -464,8 +466,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .skills__item {
-  padding: 0.55rem 1.0rem;
-  border: 1px solid rgba(70, 66, 208, 0.55); /* matches your --pink vibe */
+  padding: 0.55rem 1rem;
+  border: 1px solid rgba(70, 66, 208, 0.55);
   border-radius: 999px;
   font-size: 1.3rem;
   line-height: 1;
@@ -473,7 +475,6 @@ body:not(.user-is-tabbing) a:focus {
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 }
-
 
 /* Mobile header layout */
 @media (max-width: 600px) {
@@ -496,37 +497,46 @@ body:not(.user-is-tabbing) a:focus {
     margin-right: auto;
   }
 
-  /* Allow first line to wrap on small screens */
   .header__one-line .first-line {
     white-space: normal;
   }
+
   .skills {
     justify-content: center;
   }
 }
 
 /* --------------------------------------- */
-/* Work */
+/* Work / Projects */
 /* --------------------------------------- */
+
+/* Make Projects header-to-content spacing consistent */
+.work h2 {
+  margin-bottom: 3rem; /* tighter than global */
+}
+
 .work__box {
   display: flex;
   align-items: center;
+  gap: 5rem;
+}
+
+/* Better spacing between project cards */
+.work__box:not(:last-child) {
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 500px) {
+  .work__box:not(:last-child) {
+    margin-bottom: 6rem;
+  }
 }
 
 @media (max-width: 900px) {
   .work__box {
     align-items: initial;
     flex-direction: column-reverse;
-  }
-}
-
-.work__box:not(:last-child) {
-  margin-bottom: 25rem;
-}
-
-@media (max-width: 500px) {
-  .work__box:not(:last-child) {
-    margin-bottom: 20rem;
+    gap: 2.5rem;
   }
 }
 
@@ -536,7 +546,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__text {
-  flex: 0 0 30%;
+  flex: 0 0 42%;
+  max-width: 560px;
 }
 
 .work__list {
@@ -558,11 +569,11 @@ body:not(.user-is-tabbing) a:focus {
 /* Carousel */
 .carousel {
   position: relative;
-  width: 90%;
-  max-width: 800px;
+  flex: 1;
+  width: auto;
+  max-width: 760px;
   overflow: hidden;
-  margin-left: 2rem;
-  margin-right: auto;
+  margin: 0;
 }
 
 .carousel__container {
@@ -570,13 +581,11 @@ body:not(.user-is-tabbing) a:focus {
   position: relative;
   transition: transform 0.5s ease-in-out;
 
-  /* Safari Fix */
   -webkit-transform: translateX(0);
   transform: translateX(0);
   -webkit-backface-visibility: hidden;
 }
 
-/* Slide items */
 .work__image-box,
 .work__video-box {
   flex: 0 0 100%;
@@ -588,12 +597,12 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__image,
 .work__video {
-  width: 90%;
-  max-width: 700px;
+  width: 100%;
+  max-width: none;
   height: auto;
   object-fit: cover;
-  border-radius: 8px;
-  margin: 0 auto;
+  border-radius: 14px;
+  margin: 0;
 }
 
 /* Carousel arrows */
@@ -608,7 +617,6 @@ body:not(.user-is-tabbing) a:focus {
   cursor: pointer;
   z-index: 10;
 
-  /* Safari Fix */
   -webkit-user-select: none;
   user-select: none;
 }
@@ -623,6 +631,63 @@ body:not(.user-is-tabbing) a:focus {
 
 .carousel__button:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Optional helper classes for improved project text */
+.work__text h3 {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+  word-break: keep-all;
+}
+
+.work__summary {
+  margin: 0 0 1.6rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 60ch;
+}
+
+.work__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0 0 1.6rem;
+}
+
+.work__pill {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(70, 66, 208, 0.55);
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 1.25rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.work__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.8rem;
+}
+
+.work__bullets li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin: 0.8rem 0;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.work__bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(70, 66, 208, 0.9);
 }
 
 /* --------------------------------------- */
@@ -727,121 +792,3 @@ body:not(.user-is-tabbing) a:focus {
     padding: var(--gutter-medium) 0;
   }
 }
-
-
-/* ============================================================
-   WORK SECTION VISUAL UPGRADE 
-   ============================================================ */
-
-/* Better spacing between text and carousel */
-.work__box {
-  gap: 5rem;
-}
-
-/* Make text column a bit wider and more readable */
-.work__text {
-  flex: 0 0 42%;
-  max-width: 560px;
-}
-
-/* Make the carousel feel aligned (remove the "pushed right" look) */
-.carousel {
-  flex: 1;
-  width: auto;
-  max-width: 760px;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* Make the image fill the carousel area (no tiny image) */
-.work__image,
-.work__video {
-  width: 100%;
-  max-width: none;
-  border-radius: 14px;
-}
-
-/* Nicer title sizing for project cards */
-.work__text h3 {
-  font-size: 3.2rem;
-  margin-bottom: 1.2rem;
-  word-break: keep-all;
-}
-
-/* If you use a shorter summary paragraph */
-.work__summary {
-  margin: 0 0 1.6rem;
-  font-family: 'Jost', sans-serif;
-  font-size: 1.7rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 60ch;
-}
-
-/* Tech pills under the summary */
-.work__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin: 0 0 1.6rem;
-}
-
-.work__pill {
-  display: inline-block;
-  padding: 0.55rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(70, 66, 208, 0.55);
-  background: rgba(0, 0, 0, 0.25);
-  font-size: 1.25rem;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-/* Cleaner bullets (optional: use class="work__bullets") */
-.work__bullets {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.8rem;
-}
-
-.work__bullets li {
-  position: relative;
-  padding-left: 1.6rem;
-  margin: 0.8rem 0;
-  font-size: 1.6rem;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.work__bullets li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: rgba(70, 66, 208, 0.9);
-}
-
-/* Mobile: keep stacking behavior, but reduce the giant gap */
-@media (max-width: 900px) {
-  .work__box {
-    gap: 2.5rem;
-  }
-
-  .work__text {
-    max-width: 100%;
-  }
-
-  .carousel {
-    max-width: 100%;
-  }
-}
-
-/* Reduce space between header and projects */
-.header {
-  padding-bottom: 6rem;
-}
-
-.header + section {
-  padding-top: 6rem;
-}
-
