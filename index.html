@@ -50,7 +50,7 @@
         <p class="header__bio">
           Mohamed T. Eraky is a Ph.D. candidate in Mechanical Engineering at Stevens Institute of Technology,
           specializing in computational modeling and multiphysics simulation of microrobotic and smart actuator systems.
-          His work integrates analytical modeling and coupled thermo-mechanical finite element analysis to simulate and
+          His work integrates numerical and analytical  modeling and coupled thermo-mechanical finite element analysis to simulate and
           optimize helical microrobot formation and actuation.
         </p>
         <a href="#contact" class="btn btn--pink">Contact</a>
@@ -260,6 +260,50 @@
             </div>
           </div>
 
+
+          <!-- project Diabetic Red Blood Cell Aggregation -->
+<div class="work__box">
+  <div class="work__text">
+    <h3>Diabetic Red Blood Cell Aggregation (FSI)</h3>
+
+    <p class="work__summary">
+      In diabetes mellitus, red blood cells exhibit increased cell–cell aggregation,
+      enhanced adhesion to endothelial walls, and elevated membrane viscosity and
+      stiffness due to surface protein glycation, leading to reduced microvascular flow.
+      To investigate these effects, a Fortran subroutine was developed and integrated into
+      proprietary fluid–structure interaction software to model red blood cell (RBC)
+      aggregation mechanics. The model computes localized, nonlinear RBC–RBC interaction
+      nodal forces based on intercellular proximity.
+    </p>
+
+    <div class="work__meta">
+      <span class="work__pill">Fortran</span>
+      <span class="work__pill">HPC</span>
+      <span class="work__pill">Continuous-Forcing IBM</span>
+      <span class="work__pill">FEM (Solid)</span>
+      <span class="work__pill">FVM (Fluid)</span>
+    </div>
+
+    <ul class="work__bullets">
+      <li>Developed a custom Fortran subroutine to compute RBC–RBC aggregation forces</li>
+      <li>Applied centroid-to-centroid proximity filtering to efficiently identify interacting cell pairs</li>
+      <li>Performed vertex-to-vertex distance checks to capture localized membrane nodal interaction forces</li>
+      <li>Implemented a nonlinear, distance-dependent aggregation force law at the nodal level</li>
+      <li>Captured rouleaux-like aggregation patterns relevant to diabetic hemorheology</li>
+    </ul>
+  </div>
+</div>
+
+            <div class="carousel">
+              <div class="carousel__container">
+
+                <!-- Slide 1: VIDEO -->
+                <div class="work__video-box">
+                  <video class="work__video" controls playsinline preload="metadata">
+                    <source src="./videos/FSI_simulation.mp4" type="video/mp4" />
+                  </video>
+                </div>
+          </div>
 
           <!-- Each div with the work__box class is a project. -->
 
