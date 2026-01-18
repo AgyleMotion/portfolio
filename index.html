@@ -264,7 +264,7 @@
           <!-- project Diabetic Red Blood Cell Aggregation -->
 <div class="work__box">
   <div class="work__text">
-    <h3>Diabetic Red Blood Cell Aggregation (FSI)</h3>
+    <h3> Cell Aggregation (FSI)</h3>
 
     <p class="work__summary">
       In diabetes mellitus, red blood cells exhibit increased cell–cell aggregation,
@@ -285,14 +285,21 @@
     </div>
 
     <ul class="work__bullets">
-      <li>Developed a custom Fortran subroutine to compute RBC–RBC aggregation forces</li>
-      <li>Applied centroid-to-centroid proximity filtering to efficiently identify interacting cell pairs</li>
-      <li>Performed vertex-to-vertex distance checks to capture localized membrane nodal interaction forces</li>
-      <li>Implemented a nonlinear, distance-dependent aggregation force law at the nodal level</li>
-      <li>Captured rouleaux-like aggregation patterns relevant to diabetic hemorheology</li>
+      <li>Developed a Fortran subroutine to compute RBC–RBC aggregation forces</li>
+<li>Identified interacting cell pairs using centroid- and vertex-based proximity criteria</li>
+<li>Implemented a nonlinear, distance-dependent nodal aggregation force model</li>
+<li>Captured rouleaux-like aggregation relevant to diabetic hemorheology</li>
+
     </ul>
   </div>
 </div>
+
+<div class="work__links">
+                <a href="https://github.com/AgyleMotion/cell-aggregation-fortran.git" class="link__text">
+                  View GitHub repository <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
 
             <div class="carousel">
               <div class="carousel__container">
@@ -300,7 +307,7 @@
                 <!-- Slide 1: VIDEO -->
                 <div class="work__video-box">
                   <video class="work__video" controls playsinline preload="metadata">
-                    <source src="./videos/FSI_simulation.mp4" type="video/mp4" />
+                    <source src="./videos/cell_aggr.mp4" type="video/mp4" />
                   </video>
                 </div>
           </div>
