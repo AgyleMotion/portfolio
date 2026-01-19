@@ -846,3 +846,7 @@ body:not(.user-is-tabbing) a:focus {
   flex: 0 0 100%;
 }
 
+.justify-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
