@@ -541,7 +541,7 @@ body:not(.user-is-tabbing) a:focus {
 @media (max-width: 900px) {
   .work__box {
     align-items: initial;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 2.5rem;
   }
 }
@@ -732,7 +732,7 @@ body:not(.user-is-tabbing) a:focus {
 
 @media (max-width: 900px) {
   .about__content {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: initial;
   }
 }
@@ -849,4 +849,13 @@ body:not(.user-is-tabbing) a:focus {
 .justify-text {
   text-align: justify;
   text-justify: inter-word;
+}
+@media (max-width: 900px) {
+  .work__text { order: 1; }
+  .carousel { order: 2; }
+}
+@media (min-width: 901px) {
+  .about__text {
+    flex: 0 0 50%;
+  }
 }
