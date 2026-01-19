@@ -50,7 +50,8 @@
         <p class="header__bio">
           Mohamed T. Eraky is a Ph.D. candidate in Mechanical Engineering at Stevens Institute of Technology,
           specializing in computational modeling and multiphysics simulation of microrobotic and smart actuator systems.
-          His work integrates numerical and analytical  modeling and coupled thermo-mechanical finite element analysis to simulate and
+          His work integrates numerical and analytical modeling and coupled thermo-mechanical finite element analysis to
+          simulate and
           optimize helical microrobot formation and actuation.
         </p>
         <a href="#contact" class="btn btn--pink">Contact</a>
@@ -259,42 +260,43 @@
           </div>
 
 
-<div class="work__box">
+          <div class="work__box">
             <div class="work__text">
               <h3>Cell Aggregation (FSI) </h3>
-             
+
               <p class="work__summary">
                 In diabetes mellitus, red blood cells exhibit increased cell–cell aggregation,
-      enhanced adhesion to endothelial walls, and elevated membrane viscosity and
-      stiffness due to surface protein glycation, leading to reduced microvascular flow.
-      To investigate these effects, a Fortran subroutine was developed and integrated into
-      proprietary fluid–structure interaction software to model red blood cell (RBC)
-      aggregation mechanics. The model computes localized, nonlinear RBC–RBC interaction
-      nodal forces based on intercellular proximity.
+                enhanced adhesion to endothelial walls, and elevated membrane viscosity and
+                stiffness due to surface protein glycation, leading to reduced microvascular flow.
+                To investigate these effects, a Fortran subroutine was developed and integrated into
+                proprietary fluid–structure interaction software to model red blood cell (RBC)
+                aggregation mechanics. The model computes localized, nonlinear RBC–RBC interaction
+                nodal forces based on intercellular proximity.
               </p>
-                  <div class="work__meta">
-      <span class="work__pill">Fortran</span>
-      <span class="work__pill">HPC</span>
-      <span class="work__pill">Continuous-Forcing IBM</span>
-      <span class="work__pill">FEM (Solid)</span>
-      <span class="work__pill">FVM (Fluid)</span>
-    </div>
+              <div class="work__meta">
+                <span class="work__pill">Fortran</span>
+                <span class="work__pill">HPC</span>
+                <span class="work__pill">Continuous-Forcing IBM</span>
+                <span class="work__pill">FEM (Solid)</span>
+                <span class="work__pill">FVM (Fluid)</span>
+              </div>
 
-    <ul class="work__bullets">
-      <li>Developed a Fortran subroutine to compute RBC–RBC aggregation forces</li>
-      <li>Identified interacting cell pairs using centroid- and vertex-based proximity criteria</li>
-      <li>Implemented a nonlinear, distance-dependent nodal aggregation force model</li>
-      <li>Captured rouleaux-like aggregation relevant to diabetic hemorheology</li>
-    </ul>
-                  <div class="work__links">
-                    <a href="https://github.com/AgyleMotion/cell-aggregation-fortran.git" target="_blank" class="link__text">
-                      View GitHub repository <span>&rarr;</span>
-                    </a>
+              <ul class="work__bullets">
+                <li>Developed a Fortran subroutine to compute RBC–RBC aggregation forces</li>
+                <li>Identified interacting cell pairs using centroid- and vertex-based proximity criteria</li>
+                <li>Implemented a nonlinear, distance-dependent nodal aggregation force model</li>
+                <li>Captured rouleaux-like aggregation relevant to diabetic hemorheology</li>
+              </ul>
+              <div class="work__links">
+                <a href="https://github.com/AgyleMotion/cell-aggregation-fortran.git" target="_blank"
+                  class="link__text">
+                  View GitHub repository <span>&rarr;</span>
+                </a>
 
-                  </div>
+              </div>
             </div>
 
-           <div class="carousel">
+            <div class="carousel">
               <div class="carousel__container">
 
                 <!-- Slide 1: VIDEO -->
@@ -309,39 +311,53 @@
             </div>
           </div>
 
-  <div class="work__box">
+          <div class="work__box">
             <div class="work__text">
               <h3> Effect of Microvessel Curvatue on Blood Apparent Viscoity</h3>
-             
-    <p class="work__summary">
-      Simulated high-hematocrit blood flow in curved tubular geometries using
-       a fluid–structure interaction framework. A cell injection algorithm based 
-       on spatial box-searching was implemented in proprietary software to enable
-        robust cell injection and achieve high volume fractions in curved geometries.
-         The apparent blood viscosity was computed as the ratio of the flow rate 
-         without cells to the flow rate with cells.  
-      </p>
-      
-    <div class="work__meta">
-      <span class="work__pill">Fortran</span>
-      <span class="work__pill">HPC</span>
-      <span class="work__pill">Tecplot</span>
-      <span class="work__pill">Continuous-Forcing IBM</span>
-      <span class="work__pill">FEM (Solid)</span>
-      <span class="work__pill">FVM (Fluid)</span>
-    </div>
 
-    <ul class="work__bullets">
-     <li>Increased red blood cell volume fraction from 7% to 30% in curved tube by implementing cell injection using spatial box-searching</li>
-      <li>Analyzed velocity profiles and cell distribution in stright and curved tubes </li>
-      <li>Computed flow rate in straight and curved tubes as Q = &Sigma;<sub>i=1</sub><sup>N</sup> A<sub>i</sub>&nbsp;V<sub>i</sub>
-</li>
-      <li> Apparent viscoity μ<sub>app</sub> = Q<sub>0</sub> / Q </li>
-    </ul>
-                
+              <p class="work__summary">
+                Simulated high-hematocrit blood flow in curved tubular geometries using
+                a fluid–structure interaction framework. A cell injection algorithm based
+                on spatial box-searching was implemented in proprietary software to enable
+                robust cell injection and achieve high volume fractions in curved geometries.
+                The apparent blood viscosity was computed as the ratio of the flow rate
+                without cells to the flow rate with cells.
+              </p>
+
+              <div class="work__meta">
+                <span class="work__pill">Fortran</span>
+                <span class="work__pill">HPC</span>
+                <span class="work__pill">Tecplot</span>
+                <span class="work__pill">Continuous-Forcing IBM</span>
+                <span class="work__pill">FEM (Solid)</span>
+                <span class="work__pill">FVM (Fluid)</span>
+              </div>
+
+              <ul class="work__bullets">
+                <li>
+                  Increased red blood cell volume fraction from 7% to 30% in curved tubes by
+                  implementing a cell injection algorithm using spatial box-searching
+                </li>
+
+                <li>
+                  Analyzed velocity profiles and cell distribution in straight and curved tubes
+                </li>
+
+                <li>
+                  Computed flow rate in straight and curved tubes as
+                  <i>Q</i> = &Sigma;<sub>i=1</sub><sup>N</sup> <i>A</i><sub>i</sub>&nbsp;<i>V</i><sub>i</sub>
+                </li>
+
+                <li>
+                  Computed apparent viscosity as
+                  <i>&mu;</i><sub>app</sub> = <i>Q</i><sub>0</sub> / <i>Q</i>
+                </li>
+
+              </ul>
+
             </div>
 
-           <div class="carousel">
+            <div class="carousel">
               <div class="carousel__container">
                 <div class="work__image-box">
                   <img src="./images/rbc1.png" class="work__image" alt="Project 1" />
@@ -355,7 +371,7 @@
                 <div class="work__image-box">
                   <img src="./images/rbc4.png" class="work__image" alt="Project 1" />
                 </div>
-             </div>
+              </div>
               <button class="carousel__button carousel__button--prev">&#10094;</button>
               <button class="carousel__button carousel__button--next">&#10095;</button>
             </div>
