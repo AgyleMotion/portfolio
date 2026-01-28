@@ -259,7 +259,6 @@
             </div>
           </div>
 
-
           <div class="work__box">
             <div class="work__text">
               <h3>Cell Aggregation (FSI) </h3>
@@ -377,31 +376,118 @@
             </div>
           </div>
 
+          <!-- project  -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>
+                Stretching of a Human Red Blood Cell in Abaqus/Explicit Using Hyperelastic Models Implemented in a VUMAT
+                Subroutine
+              </h3>
+
+              <p class="work__summary">
+                A user-defined material subroutine (VUMAT) was developed to implement the Skalak hyperelastic
+                constitutive model for large-deformation membrane mechanics in Abaqus/Explicit.
+                The subroutine computes stresses based on the stretch tensor and invariants of the right
+                Cauchy–Green deformation tensor, enabling accurate modeling of nonlinear elastic behavior
+                in thin biological membranes such as human red blood cells.
+                The VUMAT reads standard Abaqus/Explicit input variables, including deformation gradients, stretch
+                tensors, material properties, and state variables, and updates stresses at each material point.
+              </p>
+
+              <div class="work__meta">
+                <span class="work__pill">Abaqus/Explicit</span>
+                <span class="work__pill">VUMAT</span>
+                <span class="work__pill">Hyperelasticity</span>
+                <span class="work__pill">Skalak Model</span>
+              </div>
+
+              <ul class="work__bullets">
+                <li>
+                  Implemented nonlinear hyperelastic membrane constitutive model using user-defined VUMAT subroutine
+                  based on the Skalak model
+                </li>
+
+                <li>
+                  Conducted a mesh refinement study using four-node bilinear shell elements (S4R)
+                </li>
+                <li>
+                  Quantitatively validated simulation results through comparison of predicted axial and transverse
+                  diameters with experimental measurements over the pN force range
+                </li>
+
+              </ul>
+
+               <div class="work__links">
+                <a href="https://github.com/AgyleMotion/Abaqus-VUMAT-Hyperelastic-Modeling-of-Human-Red-Blood-Cell-Stretching.git" class="link__text">
+                  View GitHub repository <span>&rarr;</span>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="carousel">
+              <div class="carousel__container">
+                <div class="work__video-box">
+                  <video class="work__video" controls playsinline preload="metadata">
+                    <source src="./videos/cell_stretching.mp4" type="video/mp4" />
+
+                  </video>
+                </div>
+
+                <div class="work__image-box">
+                  <img src="./images/modelsetup.PNG" class="work__image"
+                    alt="RBC stretching model setup and experimental validation using optical tweezers" />
+                </div>
+
+                <div class="work__image-box">
+                  <img src="./images/RBCmeshing.PNG" class="work__image"
+                    alt="Mesh refinement study of RBC using four-node bilinear shell elements" />
+                </div>
+              </div>
+
+              <button class="carousel__button carousel__button--prev">&#10096;</button>
+              <button class="carousel__button carousel__button--next">&#10097;</button>
+            </div>
+          </div>
+
 
           <!-- project  -->
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Combined CFD–Finite Element Model for Studying Sand Erosion Mechanics</h3>
+              <h3>CFD and DEM-Finite Element Model for Studying Sand Erosion Mechanics</h3>
 
               <p class="work__summary">
-                Numerical and experimental investigation of sand erosion using CFD, 
-                coupled DEM–FEM simulations, and force-based velocimetry measurements.
+                Numerical and experimental investigation of sand erosion using CFD,
+                coupled DEM–FEM simulations (for the first time),
+                and force-based velocimetry measurements.
               </p>
 
               <div class="work__meta">
                 <span class="work__pill">ANSYS Fluent</span>
-                <span class="work__pill">Abaqus</span>          
+                <span class="work__pill">Abaqus/EXPLICIT</span>
+                <span class="work__pill">Brittle cracking model</span>
                 <span class="work__pill">Arduino</span>
               </div>
 
               <ul class="work__bullets">
-                <li>Eulerian–Eulerian CFD simulations to compute sand jet velocity</li>
-                <li>The first video illustrates the evolution of the secondary phase (sand) volume fraction and the corresponding velocity field of the primary phase (air).</li>
-                <li>DEM configuration in Abaqus for particle–surface interaction modeling</li>
-                <li>Coupled DEM–FEM erosion simulations with damage and element deletion</li>
+                <li>Develop a coupled DEM–FEM simulation framework to realistically predict erosion damage caused by
+                  high-velocity sand jet impingement, using a brittle cracking damage model with element deletion to
+                  represent material fracture and debris removal.</li>
+                <li>Eulerian–Eulerian CFD simulations to compute sand jet velocity field and volume fraction </li>
+                <li>The first video illustrates the DEM–FEM configuration in Abaqus for particle–surface interaction
+                  modeling, including element deletion to simulate the erosion process at 45° impingement angle.</li>
+                <li>The second video illustrates the evolution of the secondary phase (sand) volume fraction and the
+                  corresponding velocity field of the primary phase (air).</li>
                 <li>Force-velocimetry DAQ system to measure sand jet velocity experimentally</li>
               </ul>
+              <div class="work__links">
+                <a href="https://asmedigitalcollection.asme.org/IMECE/proceedings-abstract/IMECE2018/52149/276519"
+                  target="_blank" class="link__text">
+                  View publication <span>&rarr;</span>
+                </a>
+              </div>
             </div>
 
             <div class="carousel">
@@ -409,14 +495,14 @@
 
                 <div class="work__video-box">
                   <video class="work__video" controls playsinline preload="metadata">
-                    <source src="./videos/multiphase_vid.mp4" type="video/mp4" />
+                    <source src="./videos/DEM.mp4" type="video/mp4" />
                     Your browser does not support the video tag
                   </video>
                 </div>
 
-                 <div class="work__video-box">
+                <div class="work__video-box">
                   <video class="work__video" controls playsinline preload="metadata">
-                    <source src="./videos/DEM.mp4" type="video/mp4" />
+                    <source src="./videos/multiphase_vid.mp4" type="video/mp4" />
                     Your browser does not support the video tag
                   </video>
                 </div>
@@ -489,7 +575,6 @@
           </div>
 
 
-
           <!-- Each div with the work__box class is a project. -->
 
           <div class="work__box">
@@ -519,7 +604,7 @@
 
               <div class="work__links">
                 <a href="https://ieeexplore.ieee.org/abstract/document/10719860" target="_blank" class="link__text">
-                  See Publication <span>&rarr;</span>
+                  View Publication <span>&rarr;</span>
                 </a>
               </div>
             </div>
@@ -567,14 +652,14 @@
             <!-- Replace the below paragraph with info about yourself -->
             <p class="justify-text">
 
-              Mohamed T. Eraky received his B.S. (2014) and M.Sc. (2019) degrees in Aerospace 
-              Engineering from Cairo University, Giza, Egypt, and his M.Eng. degree in 
-              Mechanical and Aerospace Engineering (2023) from Rutgers University, 
-              New Jersey, USA. He previously worked as a Thermal Analyst at Optumatics 
+              Mohamed T. Eraky received his B.S. (2014) and M.Sc. (2019) degrees in Aerospace
+              Engineering from Cairo University, Giza, Egypt, and his M.Eng. degree in
+              Mechanical and Aerospace Engineering (2023) from Rutgers University,
+              New Jersey, USA. He previously worked as a Thermal Analyst at Optumatics
               and as an Airframe and Powerplant Engineer at EGYPTAIR. He is currently a Ph.D.
-               candidate in Mechanical Engineering at Stevens Institute of Technology, 
-               where his research focuses on computational modeling and multiphysics 
-               simulation of microrobotic and smart actuator systems.
+              candidate in Mechanical Engineering at Stevens Institute of Technology,
+              where his research focuses on computational modeling and multiphysics
+              simulation of microrobotic and smart actuator systems.
 
             </p>
             <!-- Provide a link to your resume -->
