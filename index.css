@@ -713,3 +713,58 @@ a:hover {
 
 }
 
+
+/* ===============================
+   CONTACT CLEAN STYLE
+================================ */
+
+.contact {
+  padding: 8rem 0;
+  background: #fafafa;
+}
+
+.contact__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.contact h2 {
+  font-size: 4.2rem;
+  font-weight: 500;
+}
+
+/* Remove underline */
+.contact h2::after {
+  display: none;
+}
+
+/* Contact row */
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Icon */
+.contact__icon {
+  width: 36px;
+  height: 36px;
+  opacity: 0.85;
+}
+
+/* Email text */
+.contact__email {
+  font-size: 2.2rem;   /* BIGGER */
+  font-weight: 500;
+
+  color: #2563eb;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.contact__email:hover {
+  color: #1e40af;
+}
+
