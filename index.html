@@ -1,18 +1,3 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,72 +19,153 @@
 
 <body>
 
+  <!-- ================= NAV ================= -->
+
   <nav class="nav">
-  <div class="nav__container">
+    <div class="nav__container">
 
-    <!-- Left: Name -->
-    <div class="nav__brand">
-      Mohamed Eraky
+      <!-- Brand -->
+      <div class="nav__brand">
+        Mohamed Eraky
+      </div>
+
+      <!-- Menu -->
+      <ul class="nav__items">
+        <li><a class="nav__link active" href="#top">Home</a></li>
+        <li><a class="nav__link" href="#work">Projects</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#clients">Companies</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+
     </div>
+  </nav>
 
-    <!-- Right: Menu -->
-    <ul class="nav__items">
-      <li><a class="nav__link active" href="#top">Home</a></li>
-      <li><a class="nav__link" href="#work">Projects</a></li>
-      <li><a class="nav__link" href="#about">About</a></li>
-      <li><a class="nav__link" href="#clients">Companies</a></li>
-      <li><a class="nav__link" href="#contact">Contact</a></li>
-    </ul>
 
-  </div>
-</nav>
+  <!-- ================= HEADER ================= -->
 
-  <header class="header" role="banner" id="top">
-    <div class="row header__content">
+  <header class="header" id="top">
+
+    <div class="row header__content header__grid">
+
+
+      <!-- ===== LEFT PROFILE CARD ===== -->
+
+      <div class="header__profile">
+
+        <!-- Photo -->
+        <img
+          src="./images/myheadshotmirr.jpg"
+          alt="Mohamed Eraky"
+          class="header__photo"
+        />
+
+        <!-- Name -->
+        <h2 class="header__name">
+          Mohamed T. Eraky
+        </h2>
+
+        <!-- Title -->
+        <p class="header__title">
+          Ph.D. Candidate<br>
+          Mechanical Engineering
+        </p>
+
+        <!-- Affiliation -->
+        <p class="header__affiliation">
+          Stevens Institute of Technology
+        </p>
+
+        <!-- Social -->
+        <div class="header__social">
+
+          <!-- Email -->
+          <a href="mailto:meraky@stevens.edu" title="Email">
+            <img src="./images/email.svg" alt="Email">
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/mohammadtawfik/" target="_blank" title="LinkedIn">
+            <img src="./images/linkedin.svg" alt="LinkedIn">
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/AgyleMotion" target="_blank" title="GitHub">
+            <img src="./images/github.svg" alt="GitHub">
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===== RIGHT INTRO CONTENT ===== -->
+
       <div class="header__text">
-        <h1 class="heading-primary">Mohamed T. Eraky</h1>
+
+        <h1 class="heading-primary">
+          Hello there!
+        </h1>
 
         <p class="header__one-line">
-          <span class="first-line">
-            Ph.D. Candidate in Mechanical Engineering, Stevens Institute of Technology
-          </span>
-          <span class="next-line">
-            M.Eng., Mechanical and Aerospace Engineering, Rutgers University, NB
-          </span>
+          Ph.D. Candidate in Mechanical Engineering at Stevens Institute of Technology.<br>
+          M.Eng., Mechanical & Aerospace Engineering, Rutgers University.
         </p>
 
         <p class="header__bio">
+
           Mohamed T. Eraky is a Ph.D. candidate in Mechanical Engineering at Stevens Institute of Technology,
-          specializing in computational modeling and multiphysics simulation of microrobotic and smart actuator systems.
-          His work integrates numerical and analytical modeling and coupled thermo-mechanical finite element analysis to
-          simulate and
-          optimize helical microrobot formation and actuation.
+          specializing in computational modeling and multiphysics simulation of microrobotic and smart
+          actuator systems.
+
+          His work integrates numerical and analytical modeling and coupled thermo-mechanical finite
+          element analysis to simulate and optimize helical microrobot formation and actuation.
+
         </p>
-        <a href="#contact" class="btn btn--pink">Contact</a>
+
+
+        <!-- CTA -->
+        <a href="#contact" class="btn btn--pink">
+          Contact
+        </a>
+
+
+        <!-- Skills -->
         <div class="header__skills">
-          <p class="header__skills-title">Skills</p>
+
+          <p class="header__skills-title">
+            Skills
+          </p>
+
           <ul class="skills">
+
             <li class="skills__item">C++</li>
             <li class="skills__item">Python</li>
             <li class="skills__item">CLion</li>
             <li class="skills__item">PyCharm</li>
             <li class="skills__item">VS Code</li>
+
             <li class="skills__item">Git (Version Control)</li>
             <li class="skills__item">GitHub</li>
             <li class="skills__item">HPC (Slurm)</li>
+
             <li class="skills__item">OpenFOAM (solids4foam)</li>
             <li class="skills__item">Abaqus</li>
-            <li class="skills__item">ANSYS (Static Structural / Fluent)</li>
+            <li class="skills__item">ANSYS (Static / Fluent)</li>
+
             <li class="skills__item">Arduino</li>
             <li class="skills__item">SOLIDWORKS</li>
 
           </ul>
+
         </div>
 
       </div>
-    </div>
-  </header>
 
+
+    </div>
+
+  </header>
 
   <main role="main">
     <section class="work" id="work">
