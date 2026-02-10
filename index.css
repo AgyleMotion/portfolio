@@ -859,3 +859,59 @@ body:not(.user-is-tabbing) a:focus {
     flex: 0 0 50%;
   }
 }
+
+/* =====================================
+   FINAL WHITE THEME POLISH
+   ===================================== */
+
+/* Better body text contrast */
+p,
+.work__summary,
+.work__bullets li,
+.header__bio {
+  color: #1f2937 !important;
+}
+
+/* Light section separators */
+section {
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* Clean header (remove dark feeling) */
+.header {
+  background: #ffffff !important;
+}
+
+/* Improve button hover on white */
+.btn::after {
+  background: #e0e7ff !important;
+}
+
+/* Flatten pills and skills (no glass effect) */
+.skills__item,
+.work__pill {
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Softer carousel arrows */
+.carousel__button {
+  opacity: 0.75;
+}
+
+.carousel__button:hover {
+  opacity: 1;
+}
+
+/* Cleaner navigation underline */
+.nav__link::after {
+  height: 2px !important;
+  background: #2563eb !important;
+}
+
+/* Prevent transparent image artifacts */
+html,
+img {
+  background: #ffffff;
+}
+
