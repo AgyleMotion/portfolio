@@ -915,3 +915,68 @@ img {
   background: #ffffff;
 }
 
+/* =====================================
+   FORCE FULL LIGHT THEME
+   ===================================== */
+
+/* All main sections */
+body,
+section,
+.header,
+.work,
+.about,
+.contact,
+.footer {
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+/* Fix all headings */
+h1, h2, h3 {
+  color: #111111 !important;
+}
+
+/* Fix paragraphs everywhere */
+p,
+.work__summary,
+.work__bullets li,
+.header__bio {
+  color: #1f2937 !important;
+}
+
+/* Remove dark overlays */
+.header::before,
+.header::after {
+  display: none !important;
+}
+
+/* Projects section */
+.work {
+  background: #ffffff !important;
+}
+
+/* Pills & tags */
+.skills__item,
+.work__pill {
+  background: #f3f4f6 !important;
+  color: #111111 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+/* Section separators */
+section {
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* Footer fix */
+.footer {
+  background: #f9fafb !important;
+}
+
+/* Carousel arrows */
+.carousel__button {
+  background: #ffffff !important;
+  color: #111 !important;
+  border: 1px solid #d1d5db !important;
+}
+
