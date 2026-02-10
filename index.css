@@ -144,42 +144,107 @@ a:hover {
    NAV
 ================================ */
 
+/* ===============================
+   TOP NAV — JIMFAN STYLE
+================================ */
+
 .nav {
   position: sticky;
   top: 0;
-  background: white;
-  border-bottom: 1px solid var(--border);
-  z-index: 100;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  z-index: 999;
 }
 
+.nav__container {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.6rem 2rem;
+}
+
+/* Left: Name */
+.nav__brand {
+  font-family: 'Jost', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Right: Menu */
 .nav__items {
   display: flex;
-  justify-content: flex-end;
+  gap: 2.8rem;
   list-style: none;
-  gap: 3rem;
-  padding: 2rem 0;
+  align-items: center;
 }
 
+/* Links */
 .nav__link {
-  color: var(--text-main);
-  font-weight: 500;
   position: relative;
-}
 
-.nav__link::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
+  font-family: 'Jost', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  color: #374151;
+  text-decoration: none;
+
+  padding: 0.4rem 0;
+
   transition: 0.2s;
 }
 
-.nav__link:hover::after {
+/* Hover */
+.nav__link:hover {
+  color: #2563eb;
+}
+
+/* Underline */
+.nav__link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #2563eb;
+
+  transition: 0.25s ease;
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
   width: 100%;
 }
+
+/* Active page */
+.nav__link.active {
+  color: #2563eb;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .nav__container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .nav__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 
 /* ===============================
    HEADER
