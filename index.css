@@ -175,16 +175,15 @@ a:hover {
   padding: 1.8rem 3.2rem;
 }
 
-/* Brand / Name */
 .nav__brand {
-  font-size: 2.9rem;              /* FIXED */
-  font-weight: 800;
-  letter-spacing: -0.02em;
-
-  color: #0848d3;
-
-  cursor: default;
+  font-size: 3.3rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #000;
+  text-transform: none;
 }
+
+
 
 /* Menu */
 .nav__items {
