@@ -1104,3 +1104,57 @@ canvas,
   display: none !important;
 }
 
+/* =====================================
+   ACCENT COLOR SYSTEM (BLUE)
+   ===================================== */
+
+/* Project titles */
+.work__text h3 {
+  color: #2563eb !important;
+  font-weight: 600;
+}
+
+/* Bullet points */
+.work__bullets li::before {
+  color: #2563eb !important;
+}
+
+/* Links */
+a,
+.link,
+.link__text {
+  color: #2563eb !important;
+}
+
+/* Links hover */
+a:hover,
+.link:hover,
+.link__text:hover {
+  color: #1e40af !important;
+}
+
+/* "View GitHub" link */
+.work__links a {
+  font-weight: 500;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 2px;
+}
+
+/* Skill / tech pills highlight */
+.skills__item:hover,
+.work__pill:hover {
+  background: #e0e7ff !important;
+  border-color: #2563eb !important;
+}
+
+/* Section subtitle line */
+h2::after {
+  background: #2563eb !important;
+}
+
+/* Nav active feel */
+.nav__link:hover {
+  color: #2563eb !important;
+}
+
+
