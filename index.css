@@ -151,6 +151,42 @@ a:hover {
 /* =====================================
    JIM FAN STYLE NAV TYPOGRAPHY
    ===================================== */
+/* =====================================
+   NAV LAYOUT (REQUIRED)
+   ===================================== */
+
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* Inner container */
+.nav__container {
+  width: 100%;
+  max-width: 1180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 2rem;
+}
+
+/* Menu list */
+.nav__items {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
 
 .nav {
   font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI",
