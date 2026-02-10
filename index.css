@@ -980,3 +980,127 @@ section {
   border: 1px solid #d1d5db !important;
 }
 
+/* =========================================
+   JIMFAN.ME STYLE — CLEAN ACADEMIC THEME
+   ========================================= */
+
+/* ---------- Global Reset ---------- */
+html, body {
+  background: #ffffff !important;
+  color: #111827 !important;
+}
+
+/* ---------- Navigation (Sticky & Clean) ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 100;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav__link {
+  color: #111827 !important;
+}
+
+.nav__link::after {
+  height: 2px;
+  background: #2563eb;
+}
+
+/* ---------- Header (Plain White) ---------- */
+.header {
+  background: #ffffff !important;
+  min-height: auto;
+  padding: 8rem 0 5rem;
+}
+
+.header__text,
+.header__bio,
+.header__one-line {
+  color: #111827 !important;
+}
+
+.header__bio {
+  color: #374151 !important;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3 {
+  color: #111827 !important;
+}
+
+p,
+.work__summary,
+.work__bullets li {
+  color: #374151 !important;
+}
+
+/* Section titles underline */
+h2::after {
+  background: #2563eb;
+}
+
+/* ---------- Sections ---------- */
+section {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 6rem 0;
+}
+
+/* ---------- Skills / Pills ---------- */
+.skills__item,
+.work__pill {
+  background: #f9fafb !important;
+  color: #111827 !important;
+  border: 1px solid #d1d5db !important;
+  backdrop-filter: none !important;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  background: #2563eb;
+  color: #ffffff !important;
+  border: none;
+}
+
+.btn:hover {
+  background: #1e40af;
+}
+
+/* ---------- Projects ---------- */
+.work {
+  background: #ffffff !important;
+}
+
+.work__summary {
+  max-width: 65ch;
+}
+
+/* ---------- Carousel ---------- */
+.carousel__button {
+  background: #ffffff !important;
+  color: #2563eb !important;
+  border: 1px solid #d1d5db !important;
+  opacity: 0.8;
+}
+
+.carousel__button:hover {
+  opacity: 1;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: #f9fafb !important;
+  color: #374151 !important;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ---------- Remove Dark Artifacts ---------- */
+.header::before,
+.header::after,
+canvas,
+#particles-js {
+  display: none !important;
+}
+
