@@ -144,17 +144,6 @@ a:hover {
    NAV
 ================================ */
 
-/* ===============================
-   TOP NAV — JIMFAN STYLE
-================================ */
-
-/* =====================================
-   JIM FAN STYLE NAV TYPOGRAPHY
-   ===================================== */
-/* =====================================
-   NAV LAYOUT (REQUIRED)
-   ===================================== */
-
 .nav {
   position: sticky;
   top: 0;
@@ -289,31 +278,49 @@ a:hover {
 /* ===============================
    SKILLS / PILLS
 ================================ */
+/* =====================================
+   CLEAN SKILLS PILLS (NO BULLETS)
+===================================== */
 
-.skills,
-.work__meta {
+.skills {
+  list-style: none !important;   /* REMOVE BULLETS */
+  padding: 0;
+  margin: 1.6rem 0 0;
+
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+
+  align-items: center;
 }
 
-.skills__item,
-.work__pill {
-  background: var(--bg-main);
+/* Each pill */
+.skills__item {
+  list-style: none !important;
+
+  background: #ffffff;
+  color: #111827;
+
   border: 1px solid #d1d5db;
-  padding: 0.45rem 1.1rem;
   border-radius: 999px;
+
+  padding: 0.45rem 1.1rem;
+
   font-size: 1.3rem;
-  color: var(--text-main);
-  transition: 0.2s;
+  font-weight: 400;
+
+  white-space: nowrap; /* prevent weird breaks */
+
+  transition: all 0.15s ease;
 }
 
-.skills__item:hover,
-.work__pill:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--bg-soft);
+/* Hover */
+.skills__item:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #f9fafb;
 }
+
 
 /* ===============================
    PROJECTS
