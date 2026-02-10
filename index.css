@@ -1157,4 +1157,37 @@ h2::after {
   color: #2563eb !important;
 }
 
+/* =====================================
+   JIMFAN.ME STYLE — SKILL TAGS
+   ===================================== */
+
+.skills {
+  gap: 0.7rem;
+}
+
+/* Main pill style */
+.skills__item {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #d1d5db !important;
+
+  font-size: 1.35rem;
+  font-weight: 400;
+  padding: 0.5rem 1.1rem;
+
+  border-radius: 999px;
+
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+
+  transition: all 0.2s ease;
+}
+
+/* Hover effect (subtle) */
+.skills__item:hover {
+  background: #f9fafb !important;
+  border-color: #2563eb !important;
+  color: #2563eb !important;
+}
+
 
