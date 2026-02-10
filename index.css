@@ -386,31 +386,24 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* Header */
 /* --------------------------------------- */
+/* =====================================
+   CLEAN ACADEMIC HEADER (JIM STYLE)
+   ===================================== */
+
 .header {
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
-    url('./images/Abstract_wave.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #ffffff !important;
+  min-height: auto !important;
+  padding: 6rem 0 4rem !important;
 
-  /* Hero height but no dead space */
-  min-height: 85vh;
-
-  /* IMPORTANT: let content define the bottom */
-  padding: 8rem 0 6rem;
-
-  position: relative;
-  font-size: var(--font-size-normal);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .header__content {
-  /* Use flex instead of absolute positioning */
-  min-height: 85vh;
-  display: flex;
-  align-items: center;   /* vertical */
-  justify-content: flex-start; /* left aligned */
-  padding: 0 var(--gutter-medium);
+  min-height: auto !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
 }
+
 
 .header__text {
   /* remove absolute positioning */
@@ -1189,3 +1182,25 @@ h2::after {
   color: #2563eb !important;
 }
 
+/* Header name */
+.heading-primary {
+  font-size: 4.2rem !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+  letter-spacing: -0.02em;
+}
+
+/* Degree lines */
+.header__one-line {
+  font-size: 1.7rem !important;
+  color: #4b5563 !important;
+  margin-bottom: 1.6rem;
+}
+
+/* Bio paragraph */
+.header__bio {
+  font-size: 1.7rem !important;
+  line-height: 1.75 !important;
+  color: #374151 !important;
+  max-width: 70ch;
+}
