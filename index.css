@@ -511,3 +511,87 @@ a:hover {
   }
 
 }
+
+/* ================= PROFILE CARD (JIM STYLE) ================= */
+
+.profile-card {
+  text-align: center;
+  max-width: 340px;
+  margin: auto;
+}
+
+/* Photo */
+.profile__photo {
+  width: 240px;
+  height: 240px;
+
+  object-fit: cover;
+  border-radius: 22px;
+
+  margin-bottom: 2rem;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* Name */
+.profile__name {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #0f172a;
+
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+}
+
+/* Role */
+.profile__role {
+  font-size: 1.6rem;
+  color: #6b7280;
+  line-height: 1.5;
+
+  margin-bottom: 1rem;
+}
+
+/* Institution */
+.profile__org {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: #2563eb;
+
+  margin-bottom: 2.2rem;
+}
+
+/* Social Icons */
+.profile__social {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+/* Icon Button */
+.profile__social a {
+  width: 54px;
+  height: 54px;
+
+  background: #2563eb;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.25s ease;
+}
+
+/* Icon Image */
+.profile__social img {
+  width: 24px;
+  filter: invert(1);
+}
+
+/* Hover Effect */
+.profile__social a:hover {
+  background: #1e40af;
+  transform: translateY(-3px);
+}
+
