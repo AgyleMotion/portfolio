@@ -388,34 +388,52 @@ a:hover {
 /* ===============================
    CAROUSEL
 ================================ */
+/* ================= PROJECT IMAGE + VIDEO GRID ================= */
 
 .carousel {
   flex: 1;
   max-width: 720px;
 
   background: white;
-  padding: 1.2rem;
+  padding: 2rem;
   border-radius: 14px;
 
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-
-  position: relative;
 }
 
+/* 3x3 grid */
 .carousel__container {
-  display: flex;
-  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 }
 
-.work__image,
+/* Square cells */
+.work__image-box,
+.work__video-box {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f9fafb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Images */
+.work__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Videos */
 .work__video {
   width: 100%;
-  height: 400px;
-
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
-
-  background: #f9fafb;
 }
 
 
