@@ -119,12 +119,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* Animation */
+  transition: all 0.25s ease;
 }
 
 .profile__social img {
   width: 22px;
   filter: brightness(0) invert(1);
+
+  /* Animation */
+  transition: transform 0.25s ease;
 }
+
+/* Hover effect */
+.profile__social a:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+  background: #1d4ed8;
+}
+
+/* Icon hover */
+.profile__social a:hover img {
+  transform: scale(1.1);
+}
+
+/* Click effect (optional) */
+.profile__social a:active {
+  transform: scale(0.95);
+}
+
 
 /* PROJECTS */
 
