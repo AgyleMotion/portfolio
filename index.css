@@ -30,20 +30,15 @@ body {
 
 .nav__wrap {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem; 
   padding: 1.4rem 0;
 }
 
-
 .nav__brand {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 1.8rem;
-  color: #222;
-  letter-spacing: 0.3px;
 }
-
 
 .nav__menu {
   display: flex;
