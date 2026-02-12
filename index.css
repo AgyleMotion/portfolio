@@ -231,86 +231,90 @@ body {
 }
 
 /* Timeline container */
+
 .timeline {
   position: relative;
-  margin-left: 4rem;
-  padding-left: 4rem;
+  margin-top: 4rem;
+  padding-left: 60px;
 }
 
-/* Vertical line */
+/* Vertical Line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 14px;
-  /* center of dots */
+  left: 18px;
   top: 0;
-  width: 2px;
-  height: 100%;
+  bottom: 0;
+  width: 3px;
   background: #2563eb;
 }
 
-/* Each timeline entry */
-.timeline-item {
+/* Each Item */
+.timeline__item {
   position: relative;
   display: flex;
-  align-items: center;
-  /* vertical centering */
-  gap: 3rem;
   margin-bottom: 4rem;
 }
 
-/* Timeline dot (OUTSIDE card) */
-.timeline-dot {
+/* Dot */
+.timeline__dot {
   position: absolute;
-  left: 5px;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+
   width: 18px;
   height: 18px;
 
-  border-radius: 50%;
   background: white;
-  border: 2px solid #2563eb;
-
+  border: 3px solid #2563eb;
+  border-radius: 50%;
   z-index: 2;
 }
 
-/* Active/current */
-.timeline-dot.active {
+/* Active (Current Job) */
+.timeline__item.active .timeline__dot {
   background: #2563eb;
   box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
 }
 
 /* Card */
-.timeline-content {
-  background: white;
-  padding: 1.8rem 2rem;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+.timeline__card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
   width: 100%;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
-/* Text */
-.timeline-content h3 {
+/* Card Text */
+.timeline__card h3 {
   font-size: 1.4rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: .2rem;
 }
 
-.timeline-content h4 {
+.timeline__card h4 {
   font-weight: 500;
-  color: #444;
-  margin-bottom: 0.4rem;
+  color: #555;
+  margin-bottom: .5rem;
 }
 
-.timeline-content span {
-  font-size: 0.9rem;
-  color: #777;
+.timeline__date {
+  color: #888;
+  font-size: .95rem;
+  margin-bottom: 1rem;
 }
 
-.timeline-content ul {
-  margin-top: 1rem;
+.timeline__card ul {
   padding-left: 1.2rem;
-  line-height: 1.6;
-  color: #444;
 }
+
+.timeline__card li {
+  margin-bottom: .4rem;
+  line-height: 1.6;
+}
+
 
 
 /* CONTACT */
