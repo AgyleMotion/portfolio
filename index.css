@@ -36,9 +36,12 @@ body {
 }
 
 .nav__brand {
-  font-weight: 800;
+  font-weight: 900;
   font-size: 1.8rem;
+  color: #222;
+  letter-spacing: 0.3px;
 }
+
 
 .nav__menu {
   display: flex;
