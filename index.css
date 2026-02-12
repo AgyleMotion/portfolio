@@ -215,54 +215,6 @@ body {
   object-fit: contain;
 }
 
-/* RESEARCH & EXPERIENCE */
-
-.research,
-.experience {
-  padding: 6rem 0;
-}
-
-.research h2,
-.experience h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-/* Research items */
-.research-item {
-  margin-bottom: 2.5rem;
-}
-
-.research-item h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.4rem;
-}
-
-.research-item p {
-  color: #444;
-  line-height: 1.6;
-}
-
-/* Experience items */
-.exp-item {
-  margin-bottom: 3rem;
-}
-
-.exp-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.3rem;
-}
-
-.exp-item span {
-  color: #777;
-  font-size: 0.95rem;
-}
-
-.exp-item p {
-  margin-top: 0.6rem;
-  color: #444;
-  line-height: 1.6;
-}
 
 
 /* CONTACT */

@@ -22,7 +22,7 @@
 
       <ul class="nav__menu">
         <li><a href="#home">Home</a></li>
-        <li><a href="#work">Projects</a></li>
+        <li><a href="#work">Featured</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -403,66 +403,163 @@
 
   <!-- RESEARCH -->
 
-  <section class="research" id="research">
+  <section class="projects" id="research">
+
     <div class="container">
 
       <h2>Research</h2>
 
-      <div class="research-item">
-        <h3>Helical Microrobotic Actuators</h3>
-        <p>
-          Design and modeling of thermo-piezoelectric helical actuators for
-          active guidewire navigation and minimally invasive thrombus retrieval.
-        </p>
+      <!-- RESEARCH ITEM 1 -->
+
+      <div class="project">
+
+        <div class="project__info">
+
+          <h3>Helical Microrobotic Actuators</h3>
+
+          <p>
+            Design and modeling of thermo-piezoelectric helical actuators
+            for active guidewire navigation and thrombus retrieval.
+          </p>
+
+        </div>
+
+        <div class="carousel">
+
+          <div class="carousel__track">
+
+            <div class="slide">
+              <img src="./images/research1.png">
+            </div>
+
+            <div class="slide">
+              <img src="./images/research2.png">
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="research-item">
-        <h3>Multiphysics Simulation & FEA</h3>
-        <p>
-          Development of coupled thermal–mechanical and FSI models using
-          Abaqus, ANSYS, and custom C++/Python solvers.
-        </p>
-      </div>
+      <!-- RESEARCH ITEM 2 -->
 
-      <div class="research-item">
-        <h3>Computational Biomechanics</h3>
-        <p>
-          RBC aggregation and hyperelastic membrane modeling using
-          Fortran VUMAT subroutines.
-        </p>
+      <div class="project">
+
+        <div class="project__info">
+
+          <h3>Computational Biomechanics (RBC)</h3>
+
+          <p>
+            Hyperelastic membrane modeling and FSI simulation
+            using Fortran VUMAT and Abaqus.
+          </p>
+
+        </div>
+
+        <div class="carousel">
+
+          <div class="carousel__track">
+
+            <div class="slide">
+              <video autoplay muted loop playsinline>
+                <source src="./videos/rbc_research.mp4">
+              </video>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
+
   </section>
 
-  <!-- EXPERIENCE -->
 
-  <section class="experience" id="experience">
+  <!-- PUBLICATIONS -->
+
+  <section class="projects" id="publications">
+
     <div class="container">
 
-      <h2>Experience</h2>
+      <h2>Publications</h2>
 
-      <div class="exp-item">
-        <h3>Ph.D. Researcher – Stevens Institute of Technology</h3>
-        <span>2022 – Present</span>
-        <p>
-          Conduct research in microrobotics, smart actuators, and multiphysics
-          simulation. Develop high-performance computational tools in C++ and Python.
-        </p>
+      <!-- PAPER 1 -->
+
+      <div class="project">
+
+        <div class="project__info">
+
+          <h3>Elastic Helical Actuators for Neurovascular Navigation</h3>
+
+          <p>
+            Mohamed T. Eraky, et al.<br>
+            IEEE Transactions on Robotics, 2025.
+          </p>
+
+          <a href="paper1.pdf" target="_blank">
+            Download PDF →
+          </a>
+
+        </div>
+
+        <div class="carousel">
+
+          <div class="carousel__track">
+
+            <div class="slide">
+              <img src="./images/paper1_fig1.png">
+            </div>
+
+            <div class="slide">
+              <img src="./images/paper1_fig2.png">
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
+      <!-- PAPER 2 -->
 
-      <div class="exp-item">
-        <h3>Technical Analyst – Optumatics</h3>
-        <span>2016 – 2018</span>
-        <p>
-          Conducted CFD and thermal simulations for automotive
-          exhaust systems.
-        </p>
+      <div class="project">
+
+        <div class="project__info">
+
+          <h3>Multiphysics Modeling of RBC Aggregation</h3>
+
+          <p>
+            Mohamed T. Eraky, et al.<br>
+            Journal of Biomechanics, 2024.
+          </p>
+
+          <a href="paper2.pdf" target="_blank">
+            Download PDF →
+          </a>
+
+        </div>
+
+        <div class="carousel">
+
+          <div class="carousel__track">
+
+            <div class="slide">
+              <img src="./images/paper2_fig.png">
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
+
   </section>
+
 
 
   <!-- CONTACT -->
