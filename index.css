@@ -309,17 +309,22 @@ body {
 
 /* CONTACT */
 
-.contact {
-  padding: 5rem 0;
-  background: #f9fafb;
-  text-align: center;
+/* Contact icons */
+.contact__icon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.85;
+  filter: grayscale(100%);
+  transition: all 0.2s ease;
 }
 
-.contact a {
-  font-size: 1.8rem;
-  color: #2563eb;
-  text-decoration: none;
+/* Hover effect */
+.contact__item:hover .contact__icon {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.1);
 }
+
 
 
 /* FOOTER */
