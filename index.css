@@ -318,7 +318,7 @@ body {
   width: 26px;
   height: 26px;
   opacity: 0.85;
-  filter: grayscale(100%);
+  filter: none;
   transition: all 0.2s ease;
 }
 
@@ -328,6 +328,23 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
+
+/* Contact links color fix */
+
+.contact__item a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact__item a:visited {
+  color: #2563eb;
+}
+
+.contact__item a:hover {
+  text-decoration: underline;
+}
+
 
 
 
