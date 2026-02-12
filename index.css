@@ -231,28 +231,47 @@ body {
 /* Timeline wrapper */
 .timeline {
   position: relative;
-  margin-left: 2rem;
-  padding-left: 2rem;
-  border-left: 2px solid #2563eb;
+  margin-left: 3rem;
+  padding-left: 3rem;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #2563eb;
 }
 
 /* Each item */
 .timeline-item {
   position: relative;
+  display: flex;
+  gap: 2.5rem;
   margin-bottom: 4rem;
 }
 
-/* Blue dot */
+/* Dot wrapper */
 .timeline-dot {
-  position: absolute;
-  left: -12px;
-  top: 5px;
+  position: relative;
   width: 18px;
   height: 18px;
-  background: #2563eb;
+  margin-left: -40px;
+  margin-top: 5px;
+
   border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 0 0 2px #2563eb;
+  background: white;
+  border: 2px solid #2563eb;
+  z-index: 2;
+}
+
+/* Active (current job) */
+.timeline-dot.active {
+  background: #2563eb;
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
 }
 
 /* Card */
@@ -261,9 +280,10 @@ body {
   padding: 1.8rem 2rem;
   border-radius: 14px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  width: 100%;
 }
 
-/* Text styling */
+/* Text */
 .timeline-content h3 {
   font-size: 1.4rem;
   margin-bottom: 0.2rem;
