@@ -219,6 +219,8 @@ body {
 
 /* EXPERIENCE TIMELINE */
 
+/* EXPERIENCE TIMELINE */
+
 .experience {
   padding: 6rem 0;
 }
@@ -228,18 +230,18 @@ body {
   margin-bottom: 4rem;
 }
 
-/* Timeline wrapper */
+/* Timeline container */
 .timeline {
   position: relative;
   margin-left: 4rem;
-  padding-left: 2rem;
+  padding-left: 4rem;
 }
 
 /* Vertical line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 18px;
+  left: 14px;
   /* center of dots */
   top: 0;
   width: 2px;
@@ -247,21 +249,20 @@ body {
   background: #2563eb;
 }
 
-/* Each item */
+/* Each timeline entry */
 .timeline-item {
   position: relative;
   display: flex;
   align-items: center;
-  /* CENTER vertically */
-  gap: 2.5rem;
+  /* vertical centering */
+  gap: 3rem;
   margin-bottom: 4rem;
 }
 
-/* Timeline dot */
+/* Timeline dot (OUTSIDE card) */
 .timeline-dot {
   position: absolute;
-  left: 9px;
-  /* half of line+dot */
+  left: 5px;
   width: 18px;
   height: 18px;
 
@@ -272,7 +273,7 @@ body {
   z-index: 2;
 }
 
-/* Active dot */
+/* Active/current */
 .timeline-dot.active {
   background: #2563eb;
   box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
@@ -311,6 +312,7 @@ body {
   color: #444;
 }
 
+
 /* CONTACT */
 
 /* Contact icons */
@@ -345,8 +347,59 @@ body {
   text-decoration: underline;
 }
 
+/* Contact layout */
 
+.contact {
+  padding: 7rem 0;
+  background: #fff;
+}
 
+.contact__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* Contact title */
+
+.contact h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Contact list */
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* Each contact row */
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.5rem;
+}
+
+/* Mobile fix */
+
+@media (max-width: 900px) {
+
+  .contact__wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact__list {
+    align-items: center;
+  }
+
+}
 
 /* FOOTER */
 
