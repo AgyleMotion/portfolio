@@ -30,10 +30,11 @@ body {
 
 .nav__wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 2.5rem;      /* space between name & menu */
   padding: 1.4rem 0;
 }
+
 
 .nav__brand {
   font-weight: 800;
