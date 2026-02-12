@@ -83,8 +83,8 @@ body {
 
 .profile h2 {
   margin-top: 1.5rem;
-  font-weight: 500;
-  font-size: 1.7rem;
+  font-weight: 400;
+  font-size: 1.9rem;
   letter-spacing: 0.5px;
 }
 
@@ -93,7 +93,7 @@ body {
   color: #777;
   margin-top: .6rem;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.5;
 }
 
