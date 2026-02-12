@@ -122,7 +122,7 @@ body {
 
 .profile__social img {
   width: 22px;
-  filter: invert(1);
+  filter: invert(0);
 }
 
 
