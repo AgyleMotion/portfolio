@@ -231,15 +231,16 @@ body {
 /* Timeline wrapper */
 .timeline {
   position: relative;
-  margin-left: 3rem;
-  padding-left: 3rem;
+  margin-left: 4rem;
+  padding-left: 2rem;
 }
 
 /* Vertical line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 18px;
+  /* center of dots */
   top: 0;
   width: 2px;
   height: 100%;
@@ -250,25 +251,28 @@ body {
 .timeline-item {
   position: relative;
   display: flex;
+  align-items: center;
+  /* CENTER vertically */
   gap: 2.5rem;
   margin-bottom: 4rem;
 }
 
-/* Dot wrapper */
+/* Timeline dot */
 .timeline-dot {
-  position: relative;
+  position: absolute;
+  left: 9px;
+  /* half of line+dot */
   width: 18px;
   height: 18px;
-  margin-left: -40px;
-  margin-top: 5px;
 
   border-radius: 50%;
   background: white;
   border: 2px solid #2563eb;
+
   z-index: 2;
 }
 
-/* Active (current job) */
+/* Active dot */
 .timeline-dot.active {
   background: #2563eb;
   box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
