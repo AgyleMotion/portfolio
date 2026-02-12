@@ -335,12 +335,11 @@ body {
   color: #222;
 }
 
-/* Right side list */
 .contact__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 
 /* Each row */
 .contact__item {
