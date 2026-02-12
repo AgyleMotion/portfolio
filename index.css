@@ -315,24 +315,56 @@ body {
 
 /* CONTACT */
 
-/* Contact icons */
+.contact {
+  padding: 6rem 0;
+  background: #f9fafb;
+}
+
+/* Main layout */
+.contact__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* Title */
+.contact h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #222;
+}
+
+/* Right side list */
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* Each row */
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Icons */
 .contact__icon {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   opacity: 0.85;
-  filter: none;
   transition: all 0.2s ease;
 }
 
 /* Hover effect */
 .contact__item:hover .contact__icon {
-  filter: none;
   opacity: 1;
   transform: scale(1.1);
 }
 
-/* Contact links color fix */
-
+/* Links */
 .contact__item a {
   color: #2563eb;
   text-decoration: none;
@@ -347,52 +379,13 @@ body {
   text-decoration: underline;
 }
 
-/* Contact layout */
-
-.contact {
-  padding: 7rem 0;
-  background: #fff;
-}
-
-.contact__wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-/* Contact title */
-
-.contact h2 {
-  font-size: 3.2rem;
-  font-weight: 500;
-  color: #333;
-}
-
-/* Contact list */
-
-.contact__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-}
-
-/* Each contact row */
-
-.contact__item {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  font-size: 1.5rem;
-}
-
-/* Mobile fix */
-
+/* Mobile */
 @media (max-width: 900px) {
 
   .contact__wrap {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
 
   .contact__list {
@@ -400,6 +393,7 @@ body {
   }
 
 }
+
 
 /* FOOTER */
 
