@@ -7,21 +7,15 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  background: #fff;
-  color: #111;
-  line-height: 1.6;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-
 /* LAYOUT */
-
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 0 2rem;
 }
-
 
 /* NAV */
 
@@ -90,19 +84,24 @@ body {
 .profile h2 {
   margin-top: 1.5rem;
   font-weight: 500;
-  letter-spacing: 0.3px;
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
 }
 
 
 .profile__role {
-  color: #666;
-  margin-top: .5rem;
+  color: #777;
+  margin-top: .6rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .profile__org {
   color: #2563eb;
-  font-weight: 300;
-  margin-top: .7rem;
+  font-weight: 500;
+  margin-top: .8rem;
+  font-size: 1.05rem;
 }
 
 .profile__social {
