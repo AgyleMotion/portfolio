@@ -365,12 +365,10 @@ body {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-
 .contact__item:hover .contact__icon {
   opacity: 1;
   transform: scale(1.25);
 }
-
 
 /* Links */
 .contact__item a {
