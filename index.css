@@ -54,6 +54,15 @@ body {
   font-weight: 500;
 }
 
+/* Active nav link */
+.nav__menu a.active {
+  color: #2563eb;
+  font-weight: 600;
+  position: relative;
+}
+
+
+
 
 /* HERO */
 
@@ -216,11 +225,6 @@ body {
 }
 
 
-
-/* EXPERIENCE TIMELINE */
-
-
-
 .experience {
   padding: 6rem 0;
 }
@@ -296,10 +300,11 @@ body {
   border-radius: 16px;
   padding: 2rem 2.5rem;
   width: 100%;
-  margin-left: 20px;
+  margin-left: 60px;
   /* push card away from dot */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
+
 
 
 /* Card Text */
