@@ -249,9 +249,9 @@ body {
 
   left: 29px;
   /* center with dot */
-  top: -150%;
+  top: -100%;
   /* start halfway above */
-  height: 150%;
+  height: 100%;
   /* stretch through item */
 
   width: 4px;
