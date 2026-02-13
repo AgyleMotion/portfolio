@@ -326,13 +326,60 @@ body {
 }
 
 .timeline__card ul {
+  margin-top: 1rem;
   padding-left: 1.2rem;
 }
 
 .timeline__card li {
-  margin-bottom: .4rem;
+  margin-bottom: 0.6rem;
   line-height: 1.6;
 }
+
+
+/* Header: logo + text */
+.timeline__header {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Logo */
+.timeline__logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Text container */
+.timeline__text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Job title */
+.timeline__text h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Organization */
+.timeline__text h4 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #444;
+  margin: 0.25rem 0;
+}
+
+/* Date */
+.timeline__date {
+  font-size: 0.95rem;
+  color: #888;
+  margin: 0;
+}
+
 
 
 /* CONTACT */
