@@ -247,14 +247,14 @@ body {
   content: "";
   position: absolute;
 
-  left: 30px;
+  left: 29px;
   /* center with dot */
-  top: -70%;
+  top: -64%;
   /* start halfway above */
-  height: 110%;
+  height: 100%;
   /* stretch through item */
 
-  width: 3px;
+  width: 1px;
   background: #1664C0;
   z-index: 2;
 }
