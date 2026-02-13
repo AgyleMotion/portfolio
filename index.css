@@ -436,6 +436,17 @@ body {
   text-decoration: underline;
 }
 
+.advisor-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.advisor-link:hover {
+  text-decoration: underline;
+}
+
+
 @media (max-width: 900px) {
 
   .contact__wrap {
