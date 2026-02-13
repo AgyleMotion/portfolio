@@ -248,8 +248,8 @@ body {
   content: "";
   position: absolute;
   left: 30px;
-  top: -4rem;
-  height: 14rem;
+  top: -1rem;
+  height: 12rem;
   /* 3.5x longer */
   width: 3px;
   background: #1664C0;
