@@ -249,12 +249,12 @@ body {
 
   left: 29px;
   /* center with dot */
-  top: -100%;
+  top: -70%;
   /* start halfway above */
   height: 100%;
   /* stretch through item */
 
-  width: 1px;
+  width: 8px;
   background: #1664C0;
   z-index: 2;
 }
