@@ -239,17 +239,24 @@ body {
   /* more space for cards */
 }
 
-
-/* Vertical Line */
-.timeline::before {
+/* Line between dots */
+.timeline__item::before {
   content: "";
   position: absolute;
   left: 30px;
-  top: 0;
-  bottom: 0;
+  /* same as dot center */
+  top: -4rem;
+  /* goes upward */
+  height: 4rem;
   width: 3px;
   background: #2563eb;
 }
+
+.timeline__item:first-child::before {
+  display: none;
+}
+
+
 
 .timeline__item {
   position: relative;
@@ -257,7 +264,7 @@ body {
   align-items: center;
   /* center dot to card */
   margin-bottom: 4rem;
-  padding-left: 0 px;
+  padding-left: 0px;
   /* space for line + dot */
 }
 
@@ -323,19 +330,26 @@ body {
 }
 
 
-
 /* CONTACT */
 
 .contact {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background: #f9fafb;
 }
 
+/* Limit width + center section */
+.contact .container {
+  max-width: 900px;
+  /* makes section narrower */
+  margin: 0 auto;
+}
+
+/* Main layout */
 .contact__wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 6rem;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 /* Title */
@@ -345,33 +359,37 @@ body {
   color: #222;
 }
 
+/* Contact list */
 .contact__list {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 2.5rem;
+
+  /* Center block horizontally */
+  margin: 0 auto;
 }
-
-
-
 
 /* Each row */
 .contact__item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 1.2rem;
+  gap: 1.2rem;
+  font-size: 1.3rem;
 }
 
+/* Icons (BIGGER) */
 .contact__icon {
-  width: 26px;
-  height: 26px;
-  opacity: 0.85;
+  width: 34px;
+  /* was 24px */
+  height: 34px;
+
+  opacity: 0.9;
   filter: brightness(0);
-  transition: transform 0.25s ease, opacity 0.25s ease;
+
+  transition: all 0.25s ease;
 }
 
+/* Hover zoom */
 .contact__item:hover .contact__icon {
   opacity: 1;
   transform: scale(1.25);
@@ -384,21 +402,17 @@ body {
   font-weight: 500;
 }
 
-.contact__item a:visited {
-  color: #2563eb;
-}
-
 .contact__item a:hover {
   text-decoration: underline;
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 900px) {
 
   .contact__wrap {
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .contact__list {
