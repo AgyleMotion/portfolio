@@ -230,7 +230,7 @@ body {
 }
 
 .experience h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 4rem;
 }
 
@@ -249,12 +249,12 @@ body {
 
   left: 29px;
   /* center with dot */
-  top: -70%;
+  top: -60%;
   /* start halfway above */
   height: 100%;
   /* stretch through item */
 
-  width: 8px;
+  width: 1px;
   background: #1664C0;
   z-index: 2;
 }
