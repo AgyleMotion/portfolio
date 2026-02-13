@@ -334,32 +334,6 @@ body {
   line-height: 1.6;
 }
 
-/* Timeline header (logo + text) */
-.timeline__header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Logo size */
-.timeline__logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-/* Text block */
-.timeline__text h3 {
-  margin: 0;
-}
-
-.timeline__text h4 {
-  margin: 0.2rem 0;
-}
-
-
 
 /* CONTACT */
 
