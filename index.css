@@ -334,6 +334,22 @@ body {
   line-height: 1.6;
 }
 
+/* Timeline header: logo + text */
+.timeline__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Institution / company logo */
+.timeline__logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 
 /* CONTACT */
 
