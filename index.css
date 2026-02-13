@@ -410,7 +410,6 @@ body {
   text-decoration: underline;
 }
 
-/* MOBILE */
 @media (max-width: 900px) {
 
   .contact__wrap {
@@ -425,17 +424,12 @@ body {
 
 }
 
-
-/* FOOTER */
-
 .footer {
   padding: 2rem 0;
   border-top: 1px solid #eee;
   text-align: center;
   color: #777;
 }
-
-
 
 section h2 {
   font-weight: 400;
@@ -444,9 +438,6 @@ section h2 {
   color: #222;
 }
 
-
-
-/* MOBILE */
 
 @media (max-width: 900px) {
 
