@@ -230,7 +230,7 @@ body {
 }
 
 .experience h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-bottom: 4rem;
 }
 
@@ -254,7 +254,7 @@ body {
   height: 100%;
   /* stretch through item */
 
-  width: 4px;
+  width: 1px;
   background: #1664C0;
   z-index: 2;
 }
@@ -273,7 +273,6 @@ body {
   padding-left: 0px;
   /* space for line + dot */
 }
-
 
 /* Dot */
 .timeline__dot {
