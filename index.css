@@ -247,14 +247,14 @@ body {
   content: "";
   position: absolute;
 
-  left: 29px;
+  left: 30px;
   /* center with dot */
-  top: -65%;
+  top: -75%;
   /* start halfway above */
   height: 110%;
   /* stretch through item */
 
-  width: 2px;
+  width: 1px;
   background: #1664C0;
   z-index: 2;
 }
@@ -357,12 +357,11 @@ body {
   gap: 4rem;
 }
 
-/* Title */
 .contact h2 {
-  font-size: 3rem;
-  font-weight: 500;
-  color: #222;
+  font-size: 2.4rem;
+  font-weight: 400;
 }
+
 
 /* Contact list */
 .contact__list {
@@ -435,6 +434,16 @@ body {
   text-align: center;
   color: #777;
 }
+
+
+
+section h2 {
+  font-weight: 400;
+  /* thinner */
+  letter-spacing: 0.3px;
+  color: #222;
+}
+
 
 
 /* MOBILE */
