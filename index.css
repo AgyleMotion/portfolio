@@ -219,7 +219,7 @@ body {
 
 /* EXPERIENCE TIMELINE */
 
-/* EXPERIENCE TIMELINE */
+
 
 .experience {
   padding: 6rem 0;
@@ -249,12 +249,16 @@ body {
   background: #2563eb;
 }
 
-/* Each Item */
 .timeline__item {
   position: relative;
   display: flex;
+  align-items: center;
+  /* center dot to card */
   margin-bottom: 4rem;
+  padding-left: 40px;
+  /* space for line + dot */
 }
+
 
 /* Dot */
 .timeline__dot {
