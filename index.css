@@ -464,6 +464,16 @@ section h2 {
   color: #222;
 }
 
+.company-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
 
 @media (max-width: 900px) {
 
