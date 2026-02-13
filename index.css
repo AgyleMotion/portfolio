@@ -56,7 +56,7 @@ body {
 
 /* Active nav link */
 .nav__menu a.active {
-  color: #2563eb;
+  color: #1664C0;
   font-weight: 600;
   position: relative;
 }
@@ -109,7 +109,7 @@ body {
 }
 
 .profile__org {
-  color: #2563eb;
+  color: #1664C0;
   font-weight: 500;
   margin-top: .8rem;
   font-size: 1.05rem;
@@ -125,7 +125,7 @@ body {
 .profile__social a {
   width: 46px;
   height: 46px;
-  background: #2563eb;
+  background: #1664C0;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -147,7 +147,7 @@ body {
 .profile__social a:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-  background: #1d4ed8;
+  background: #1664C0;
 }
 
 /* Icon hover */
@@ -188,7 +188,7 @@ body {
 }
 
 .project__info a {
-  color: #2563eb;
+  color: #1664C0;
   text-decoration: none;
 }
 
@@ -248,13 +248,13 @@ body {
   content: "";
   position: absolute;
   left: 30px;
-  /* same as dot center */
   top: -4rem;
-  /* goes upward */
-  height: 4rem;
+  height: 14rem;
+  /* 3.5x longer */
   width: 3px;
-  background: #2563eb;
+  background: #1664C0;
 }
+
 
 .timeline__item:first-child::before {
   display: none;
@@ -284,14 +284,14 @@ body {
   height: 18px;
 
   background: white;
-  border: 3px solid #2563eb;
+  border: 3px solid #1664C0;
   border-radius: 50%;
   z-index: 2;
 }
 
 /* Active (Current Job) */
 .timeline__item.active .timeline__dot {
-  background: #2563eb;
+  background: #1664C0;
   box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
 }
 
@@ -401,7 +401,7 @@ body {
 
 /* Links */
 .contact__item a {
-  color: #2563eb;
+  color: #1664C0;
   text-decoration: none;
   font-weight: 500;
 }
