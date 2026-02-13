@@ -324,12 +324,11 @@ body {
   background: #f9fafb;
 }
 
-/* Main layout */
 .contact__wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  justify-content: flex-start;
+  gap: 6rem;
 }
 
 /* Title */
@@ -343,7 +342,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 
 
@@ -355,23 +357,20 @@ body {
   font-size: 1.2rem;
 }
 
-/* Icons */
 .contact__icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   opacity: 0.85;
   filter: brightness(0);
-  /* ← ADD THIS */
-  transition: all 0.2s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 
-
-/* Hover effect */
 .contact__item:hover .contact__icon {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.25);
 }
+
 
 /* Links */
 .contact__item a {
