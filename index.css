@@ -235,14 +235,16 @@ body {
 .timeline {
   position: relative;
   margin-top: 4rem;
-  padding-left: 60px;
+  padding-left: 90px;
+  /* more space for cards */
 }
+
 
 /* Vertical Line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 18px;
+  left: 30px;
   top: 0;
   bottom: 0;
   width: 3px;
@@ -255,7 +257,7 @@ body {
   align-items: center;
   /* center dot to card */
   margin-bottom: 4rem;
-  padding-left: 40px;
+  padding-left: 0 px;
   /* space for line + dot */
 }
 
@@ -263,7 +265,7 @@ body {
 /* Dot */
 .timeline__dot {
   position: absolute;
-  left: 7px;
+  left: 21px;
   top: 50%;
   transform: translateY(-50%);
 
@@ -282,15 +284,16 @@ body {
   box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
 }
 
-/* Card */
 .timeline__card {
   background: #fff;
   border-radius: 16px;
   padding: 2rem 2.5rem;
   width: 100%;
-
+  margin-left: 20px;
+  /* push card away from dot */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
+
 
 /* Card Text */
 .timeline__card h3 {
