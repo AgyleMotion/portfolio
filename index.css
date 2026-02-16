@@ -542,3 +542,11 @@ section h2 {
   background: #1664C0;
   color: white;
 }
+
+/* Paper author line */
+
+.paper-authors {
+  color: #777;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
