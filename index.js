@@ -18,7 +18,7 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 
   }
 
-  setInterval(move, 3500);
+  setInterval(move, 7000);
 
 });
 
