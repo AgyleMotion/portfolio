@@ -498,3 +498,21 @@ section h2 {
   }
 
 }
+
+/* Section Header (Featured / Research Highlights) */
+
+.section-header {
+  margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #777;
+  letter-spacing: 0.5px;
+}
