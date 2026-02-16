@@ -516,3 +516,29 @@ section h2 {
   color: #777;
   letter-spacing: 0.5px;
 }
+
+/* Paper buttons */
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  /* allows wrapping */
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.paper-links a {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid #1664C0;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1664C0;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.paper-links a:hover {
+  background: #1664C0;
+  color: white;
+}
