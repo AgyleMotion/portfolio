@@ -506,13 +506,13 @@ section h2 {
 }
 
 .section-header h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 400;
   margin-bottom: 0.4rem;
 }
 
 .section-header p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #777;
   letter-spacing: 0.5px;
 }
