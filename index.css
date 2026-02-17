@@ -611,9 +611,7 @@ body {
   border-radius: 999px;
   margin-bottom: 0.6rem;
   white-space: nowrap;
-  /* ← add this */
   width: fit-content;
-  /* ← add this */
 }
 
 .paper-badge span {
