@@ -855,3 +855,287 @@ section h2 {
 .news__venue:hover {
   text-decoration: underline;
 }
+
+/* ════════════════════════
+   EXPERIENCE SECTION
+════════════════════════ */
+
+.experience {
+  padding: 6rem 0;
+}
+
+.experience__header {
+  margin-bottom: 3rem;
+}
+
+.experience__header h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #222;
+  letter-spacing: 0.3px;
+}
+
+.experience__header p {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* ── TIMELINE ── */
+
+.timeline {
+  position: relative;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, #1664C0, rgba(22, 100, 192, 0.1));
+  border-radius: 2px;
+}
+
+/* ── ITEM ── */
+
+.timeline__item {
+  position: relative;
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  padding-left: 72px;
+
+  /* Fade-in animation */
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.timeline__item:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.timeline__item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove old ::before connector line from items */
+.timeline__item::before {
+  display: none;
+}
+
+/* ── DOT ── */
+
+.timeline__dot {
+  position: absolute;
+  left: 19px;
+  top: 28px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid #1664C0;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline__item.active .timeline__dot {
+  background: #1664C0;
+  box-shadow: 0 0 0 5px rgba(22, 100, 192, 0.15);
+}
+
+/* ── CARD ── */
+
+.timeline__card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+  width: 100%;
+  margin-left: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef0f5;
+  border-left: 3px solid transparent;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.timeline__item.active .timeline__card {
+  border-left-color: #1664C0;
+}
+
+.timeline__card:hover {
+  box-shadow: 0 8px 30px rgba(22, 100, 192, 0.12);
+  border-left-color: #1664C0;
+  transform: translateX(4px);
+}
+
+/* "Current" badge on active card */
+.timeline__item.active .timeline__card::after {
+  content: "Current";
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1664C0;
+  background: rgba(22, 100, 192, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(22, 100, 192, 0.2);
+}
+
+/* ── HEADER ROW ── */
+
+.timeline__header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0;
+}
+
+.timeline__logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f4f7fb;
+  padding: 6px;
+  flex-shrink: 0;
+  border: 1px solid #eee;
+}
+
+.timeline__text {
+  flex: 1;
+}
+
+.timeline__text h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.1rem;
+}
+
+.timeline__text h4 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.timeline__text h4 a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.timeline__text h4 a:hover {
+  color: #1664C0;
+}
+
+/* Date pill */
+.timeline__date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #888;
+  background: #f4f6f9;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-top: 0.1rem;
+}
+
+/* ── DIVIDER ── */
+
+.timeline__divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0.9rem 0;
+}
+
+/* ── BULLET LIST ── */
+
+.timeline__card ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.timeline__card li {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.timeline__card li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #1664C0;
+  font-size: 0.75rem;
+  top: 0.15rem;
+}
+
+.timeline__card li a {
+  color: #1664C0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.timeline__card li a:hover {
+  text-decoration: underline;
+}
+
+/* ── LINKS ── */
+
+.advisor-link {
+  color: #1664C0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.advisor-link:hover {
+  text-decoration: underline;
+}
+
+.company-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.company-link:hover {
+  color: #1664C0;
+  text-decoration: underline;
+}
