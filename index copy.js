@@ -1,3 +1,4 @@
+/* ── CAROUSEL ── */
 document.querySelectorAll('.carousel').forEach(carousel => {
 
   const track = carousel.querySelector('.carousel__track');
@@ -6,25 +7,18 @@ document.querySelectorAll('.carousel').forEach(carousel => {
   let index = 0;
 
   function move() {
-
     index++;
-
     if (index >= slides.length) {
       index = 0;
     }
-
-    track.style.transform =
-      `translateX(-${index * 100}%)`;
-
+    track.style.transform = `translateX(-${index * 100}%)`;
   }
 
   setInterval(move, 8000);
 
 });
 
-/* =========================
-   NAVIGATION ACTIVE STATE
-========================= */
+/* ── NAVIGATION ACTIVE STATE ── */
 
 const sections = document.querySelectorAll("section[id], header[id]");
 const navLinks = document.querySelectorAll(".nav__menu a");
@@ -34,17 +28,12 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach(section => {
-
     const sectionTop = section.offsetTop - 150;
     const sectionBottom = sectionTop + section.offsetHeight;
 
-    if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionBottom
-    ) {
+    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
       current = section.getAttribute("id");
     }
-
   });
 
   // Force Contact active at bottom
@@ -54,7 +43,6 @@ window.addEventListener("scroll", () => {
 
   navLinks.forEach(link => {
     link.classList.remove("active");
-
     if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
@@ -62,3 +50,11 @@ window.addEventListener("scroll", () => {
 
 });
 
+/* ── MOBILE: CLOSE NAV ON LINK CLICK ── */
+// Smooth scroll to section and close any focus states on mobile
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    // Remove focus ring after click (cleaner on mobile)
+    link.blur();
+  });
+});

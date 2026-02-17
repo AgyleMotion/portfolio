@@ -36,7 +36,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // Force Contact active at bottom
+  // Force Contact active at bottom of page
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
     current = "contact";
   }
@@ -50,11 +50,9 @@ window.addEventListener("scroll", () => {
 
 });
 
-/* ── MOBILE: CLOSE NAV ON LINK CLICK ── */
-// Smooth scroll to section and close any focus states on mobile
+/* ── MOBILE: REMOVE FOCUS RING AFTER NAV CLICK ── */
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
-    // Remove focus ring after click (cleaner on mobile)
     link.blur();
   });
 });
