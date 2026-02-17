@@ -1106,6 +1106,9 @@ section h2 {
   .paper-badge {
     white-space: normal;
     font-size: 0.75rem;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .experience {
