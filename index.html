@@ -30,9 +30,7 @@
     </div>
   </nav>
 
-
   <!-- HERO -->
-
   <header class="hero" id="home">
 
     <div class="container hero__grid">
@@ -93,34 +91,107 @@
   </header>
 
   <!-- NEWS -->
-  <section class="news" id="news">
+
+  <!-- ── NEWS SECTION ── -->
+  <section class="news-section" id="news">
     <div class="container">
-      <div class="section-header">
-        <h2>News</h2>
-        <p>Updates & Announcements</p>
-      </div>
 
-      <div class="news__list">
+      <!-- TICKER -->
+      <div class="news-ticker">
+        <div class="ticker__label">
+          <span class="ticker__dot"></span>
+          Latest
+        </div>
+        <div class="ticker__track-wrap">
+          <div class="ticker__track">
 
-        <div class="news__item">
-          <span class="news__date">Jan 2026</span>
-          <div>
-            <p>
-              🎉 Our paper <em>"A Compact Rotary Series Elastic Actuator with Wide Deflection Range
-                and Linear Torque Response for Physical Human–Robot Interaction"</em> has been accepted
-              for presentation at
-              <a href="https://2026.ieee-icra.org" target="_blank" rel="noopener">ICRA 2026</a>
-              (IEEE International Conference on Robotics and Automation). This work presents our
-              patent-pending <strong>Elastic Spinners</strong> actuator — a compact rotary SEA designed
-              for physical human–robot interaction (pHRI), achieving a wide passive deflection range (24°)
-              and highly linear torque response, with strong potential for wearable and assistive robots.
-            </p>
+            <span class="ticker__item">
+              <span class="ticker__new">New</span>
+              🎉 Paper accepted at
+              <a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2026</a>
+              — <em>Elastic Spinners</em>: Compact Rotary SEA for Human–Robot Interaction
+            </span>
+
+            <span class="ticker__item">
+              🎓 Ph.D. research ongoing at Stevens Institute of Technology · Hoboken, NJ
+            </span>
+
+            <span class="ticker__item">
+              🛠️ C++ Cylinder Hex Mesh Generator v1.0.0 released on GitHub
+            </span>
+
+            <span class="ticker__item">
+              📄 Published in <em>Mechanics Research Communications</em>, 2021
+            </span>
+
+            <!-- Duplicate for seamless loop -->
+            <span class="ticker__item">
+              <span class="ticker__new">New</span>
+              🎉 Paper accepted at
+              <a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2026</a>
+              — <em>Elastic Spinners</em>: Compact Rotary SEA for Human–Robot Interaction
+            </span>
+
+            <span class="ticker__item">
+              🎓 Ph.D. research ongoing at Stevens Institute of Technology · Hoboken, NJ
+            </span>
+
+            <span class="ticker__item">
+              🛠️ C++ Cylinder Hex Mesh Generator v1.0.0 released on GitHub
+            </span>
+
+            <span class="ticker__item">
+              📄 Published in <em>Mechanics Research Communications</em>, 2021
+            </span>
+
           </div>
         </div>
-
       </div>
+
+      <p class="ticker__hint">Hover to pause</p>
+
+      <!-- DETAILED CARDS -->
+      <div class="news__body-wrap">
+
+        <p class="news__heading">All News</p>
+
+        <div class="news__list">
+
+          <!-- ICRA 2026 -->
+          <div class="news__card">
+            <div class="news__meta">
+              <span class="news__date">May 2026</span>
+              <span class="news__badge">New</span>
+            </div>
+            <div class="news__content">
+              <div class="news__title">
+                🎉 Paper accepted at
+                <a class="news__venue" href="https://2026.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2026</a>
+              </div>
+              <p class="news__desc">
+                Our patent-pending <strong>Elastic Spinners</strong> actuator —
+                <em>"A Compact Rotary Series Elastic Actuator with Wide Deflection Range
+                  and Linear Torque Response for Physical Human–Robot Interaction"</em> —
+                has been accepted at the IEEE International Conference on Robotics and Automation.
+                The design achieves a 24° passive deflection range and highly linear torque response
+                in a compact form factor, targeting wearable and assistive robots.
+              </p>
+              <div class="news__tags">
+                <span class="news__tag">Robotics</span>
+                <span class="news__tag">Actuators</span>
+                <span class="news__tag">pHRI</span>
+                <span class="news__tag">Patent Pending</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
+
+
   <!-- PROJECTS -->
 
   <section class="projects" id="work">
