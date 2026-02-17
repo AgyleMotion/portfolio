@@ -610,6 +610,10 @@ body {
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
   margin-bottom: 0.6rem;
+  white-space: nowrap;
+  /* ← add this */
+  width: fit-content;
+  /* ← add this */
 }
 
 .paper-badge span {
