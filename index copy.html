@@ -21,6 +21,7 @@
 
       <ul class="nav__menu">
         <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
         <li><a href="#work">Featured</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -29,9 +30,7 @@
     </div>
   </nav>
 
-
   <!-- HERO -->
-
   <header class="hero" id="home">
 
     <div class="container hero__grid">
@@ -76,9 +75,6 @@
 
       </div>
 
-
-      <!-- INTRO -->
-
       <div class="hero__text">
 
         <h1>Hello there!</h1>
@@ -93,6 +89,94 @@
     </div>
 
   </header>
+
+  <!-- NEWS -->
+
+  <!-- ── NEWS SECTION ── -->
+  <section class="news-section" id="news">
+    <div class="container">
+
+      <!-- TICKER -->
+      <div class="news-ticker">
+        <div class="ticker__label">
+          <span class="ticker__dot"></span>
+          Latest
+        </div>
+        <div class="ticker__track-wrap">
+          <div class="ticker__track">
+
+            <span class="ticker__item">
+              <span class="ticker__new">New</span>
+              🎉 Paper accepted at
+              <a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2026</a>
+              — <em>Elastic Spinners</em>: Compact Rotary SEA for Human–Robot Interaction
+            </span>
+
+            <span class="ticker__item">
+              🛠️ C++ Cylinder Hex Mesh Generator v1.0.0 released on GitHub
+            </span>
+
+            <!-- Duplicate for seamless loop -->
+            <span class="ticker__item">
+              <span class="ticker__new">New</span>
+              🎉 Paper accepted at
+              <a href="https://2026.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2026</a>
+              — <em>Elastic Spinners</em>: Compact Rotary SEA for Human–Robot Interaction
+            </span>
+
+
+            <span class="ticker__item">
+              🛠️ C++ Cylinder Hex Mesh Generator v1.0.0 released on GitHub
+            </span>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <p class="ticker__hint">Hover to pause</p>
+
+      <!-- DETAILED CARDS -->
+      <div class="news__body-wrap">
+
+        <p class="news__heading">Latest News</p>
+
+        <div class="news__list">
+
+          <!-- ICRA 2026 -->
+          <div class="news__card">
+            <div class="news__meta">
+              <span class="news__date">Jan 2026</span>
+              <span class="news__badge">New</span>
+            </div>
+            <div class="news__content">
+              <div class="news__title">
+                🎉 Paper accepted at
+                <a class="news__venue" href="https://2026.ieee-icra.org/" target="_blank" rel="noopener">ICRA 2026</a>
+              </div>
+              <p class="news__desc">
+                Our patent-pending <strong>Elastic Spinners</strong> actuator —
+                <em>"A Compact Rotary Series Elastic Actuator with Wide Deflection Range
+                  and Linear Torque Response for Physical Human–Robot Interaction"</em> —
+                has been accepted at the IEEE International Conference on Robotics and Automation.
+                The design achieves a 24° passive deflection range and highly linear torque response
+                in a compact form factor, targeting wearable and assistive robots.
+              </p>
+              <div class="news__tags">
+                <span class="news__tag">Robotics</span>
+                <span class="news__tag">Actuators</span>
+                <span class="news__tag">pHRI</span>
+                <span class="news__tag">Patent Pending</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 
   <!-- PROJECTS -->
@@ -111,24 +195,28 @@
       <div class="project">
 
         <div class="project__info">
-
           <h3>Cylinder Hex Mesh Generator</h3>
-
           <p>
             C++ structured O-grid hexahedral mesher for cylindrical geometries.
           </p>
 
-          <a href="https://github.com/AgyleMotion/Cylinder-Hex-Mesh-Generator.git" target="_blank">
-            View Repository →
-          </a>
+          <div class="paper-links">
 
+            <a href="https://github.com/AgyleMotion/Cylinder-Hex-Mesh-Generator.git" target="_blank" rel="noopener">
+              &lt;/&gt; Code
+            </a>
+
+            <a href="https://github.com/AgyleMotion/Cylinder-Hex-Mesh-Generator/releases/tag/v1.0.0" target="_blank"
+              rel="noopener">
+              Download
+            </a>
+
+          </div>
         </div>
 
 
         <div class="carousel">
-
           <div class="carousel__track">
-
             <div class="slide">
               <img src="./images/toolcpp_1.png">
             </div>
@@ -152,35 +240,24 @@
       </div>
 
 
-      <!-- BAR HEX -->
-
       <div class="project">
 
         <div class="project__info">
-
           <h3>Bar Hex Mesh Generator</h3>
-
-          <p>
-            Python structured mesher for rectangular domains.
-          </p>
-
-          <a href="https://github.com/AgyleMotion/Square-Bar-Hex-Mesh-Generator.git" target="_blank">
-            View Repository →
-          </a>
-
+          <p>Python structured mesher for rectangular domains.</p>
+          <div class="paper-links">
+            <a href="https://github.com/AgyleMotion/Square-Bar-Hex-Mesh-Generator.git" target="_blank" rel="noopener">
+              &lt;/&gt; Code
+            </a>
+          </div>
         </div>
 
-
         <div class="carousel">
-
           <div class="carousel__track">
-
             <div class="slide">
               <img src="./images/barhexmesh.jpg">
             </div>
-
           </div>
-
         </div>
 
       </div>
@@ -514,143 +591,113 @@
 
   </section>
 
+  <!-- ── EXPERIENCE SECTION ── -->
   <section class="experience" id="experience">
     <div class="container">
 
-      <h2>Experience</h2>
+      <div class="experience__header">
+        <h2>Experience</h2>
+        <p>Academic & Industry Background</p>
+      </div>
 
       <div class="timeline">
 
-        <!-- ITEM -->
+        <!-- ── STEVENS ── -->
         <div class="timeline__item active">
-
           <span class="timeline__dot" aria-hidden="true"></span>
-
           <div class="timeline__card">
 
             <div class="timeline__header">
-
               <img src="./images/logos/stevens.svg" class="timeline__logo" alt="Stevens Institute Logo">
-
               <div class="timeline__text">
-
                 <h3>Graduate Researcher</h3>
                 <h4>Stevens Institute of Technology</h4>
-                <p class="timeline__date">
-                  Sept 2022 – Present · Hoboken, NJ
-                </p>
+                <span class="timeline__date">Sept 2022 – Present · Hoboken, NJ</span>
               </div>
             </div>
 
-            <ul>
-              <li>
-                Doctoral advisor:
-                <a href="https://www.stevens.edu/profile/yshi2" target="_blank" class="advisor-link">
-                  Prof. Yong Shi
-                </a>.
-              </li>
+            <div class="timeline__divider"></div>
 
-              <li>Developing helical microbot system for Thrombus retrieval.</li>
+            <ul>
+              <li>Doctoral advisor: <a href="https://www.stevens.edu/profile/yshi2" target="_blank"
+                  class="advisor-link">Prof. Yong Shi</a>.</li>
+              <li>Developing helical microbot system for thrombus retrieval.</li>
               <li>Developed high-performance C++ automatic hexahedral O-Grid mesh generator for cylindrical domains.
               </li>
-              <li>Built an analytical model to determine the geometric parameters that maximize deformation in a helical
-                microrobot with 4.6 % error with finite element results.
-              </li>
-
+              <li>Built an analytical model to determine geometric parameters that maximize deformation in a helical
+                microrobot with 4.6% error vs. finite element results.</li>
             </ul>
 
           </div>
-
         </div>
 
-        <!-- ITEM -->
+        <!-- ── RUTGERS ── -->
         <div class="timeline__item">
-
           <span class="timeline__dot" aria-hidden="true"></span>
-
           <div class="timeline__card">
 
             <div class="timeline__header">
-
-              <img src="./images/logos/rutgers.jpeg" class="timeline__logo" alt="Stevens Institute Logo">
-
+              <img src="./images/logos/rutgers.jpeg" class="timeline__logo" alt="Rutgers Logo">
               <div class="timeline__text">
-
                 <h3>Research Assistant</h3>
                 <h4>
                   <a href="https://bagchi.rutgers.edu/" target="_blank" class="company-link">
-                    Rutgers University–New Brunswick
+                    Rutgers University – New Brunswick
                   </a>
-                  <p class="timeline__date">
-                    Sept 2020 – June 2022 · New Jersey
-                  </p>
+                </h4>
+                <span class="timeline__date">Sept 2020 – June 2022 · New Jersey</span>
               </div>
             </div>
 
+            <div class="timeline__divider"></div>
+
             <ul>
-              <li>
-                Mentored by:
-                <a href="https://bagchi.rutgers.edu" target="_blank" class="advisor-link">
-                  Prof. Prosenjit Bagchi.
-                </a>.
-              </li>
-
+              <li>Mentored by: <a href="https://bagchi.rutgers.edu" target="_blank" class="advisor-link">Prof. Prosenjit
+                  Bagchi</a>.</li>
               <li>Increased simulated cell volume fraction from 7% to 30% in curved vascular geometries by developing a
-                Fortran-based cell injection algorithm with efficient spatial box-searching, enabling realistic
-                high-hematocrit blood flow simulations.</li>
-              <li>Performed 50+ high-fidelity coupled CFD–finite element simulations of biological cells in plasma on
-                high-performance computing systems, including Amarel at Rutgers University and Bridges-2 at the
-                Pittsburgh Supercomputing Center.</li>
-
+                Fortran-based cell injection algorithm with efficient spatial box-searching.</li>
+              <li>Performed 50+ high-fidelity coupled CFD–FEM simulations on HPC systems including Amarel (Rutgers) and
+                Bridges-2 (Pittsburgh Supercomputing Center).</li>
             </ul>
 
           </div>
-
         </div>
 
+        <!-- ── OPTUMATICS ── -->
         <div class="timeline__item">
-
           <span class="timeline__dot" aria-hidden="true"></span>
-
           <div class="timeline__card">
 
             <div class="timeline__header">
-
               <img src="./images/logos/optumatics.jpeg" class="timeline__logo" alt="Optumatics Logo">
-
               <div class="timeline__text">
-
                 <h3>Thermal Analyst</h3>
                 <h4>
-                  <h4>
-                    <a href="https://www.optumatics.com" target="_blank" class="company-link">
-                      Optumatics
-                    </a>
-                  </h4>
+                  <a href="https://www.optumatics.com" target="_blank" class="company-link">
+                    Optumatics
+                  </a>
                 </h4>
-                <p class="timeline__date">
-                  August 2016 – July 2017 · Smart Village
-                </p>
+                <span class="timeline__date">Aug 2016 – Jul 2017 · Smart Village, Egypt</span>
               </div>
             </div>
 
+            <div class="timeline__divider"></div>
+
             <ul>
-              <li>Improved the accuracy of computed temperature by thermal solver on vehicles engine components and
-                exhaust system by 20% by coupling CFD output from OpenFoam to thermal solver.</li>
-              <li>Performed thermal analysis using proprietary software on exhaust system components: Manifold, CAT,
-                muffler, and tail pipe.</li>
-              <li>Applied geometry wrapping in STAR-CCM+ to heal and clean CAD models of engine and exhaust system
-                components for FCA-Chrysler RAM vehicles (3.6 L and 5.7 L platforms).</li>
+              <li>Improved computed temperature accuracy by 20% on vehicle engine & exhaust components by coupling CFD
+                output from OpenFOAM to a thermal solver.</li>
+              <li>Performed thermal analysis on exhaust system components: manifold, CAT, muffler, and tail pipe.</li>
+              <li>Applied geometry wrapping in STAR-CCM+ to heal CAD models for FCA-Chrysler RAM vehicles (3.6L and 5.7L
+                platforms).</li>
             </ul>
 
           </div>
-
         </div>
-
 
       </div>
     </div>
   </section>
+
 
   <section class="contact" id="contact">
     <div class="container">
