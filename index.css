@@ -597,11 +597,8 @@ body {
   color: white;
 }
 
-/* ── PAPER BADGE ── */
 .paper-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
+  display: inline-block;
   font-size: 0.82rem;
   font-weight: 500;
   color: #1664C0;
@@ -610,8 +607,8 @@ body {
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
   margin-bottom: 0.6rem;
-  white-space: nowrap;
   width: fit-content;
+  line-height: 1.6;
 }
 
 .paper-badge span {
@@ -1103,13 +1100,6 @@ section h2 {
     padding: 0.3rem 0.75rem;
   }
 
-  .paper-badge {
-    white-space: normal;
-    font-size: 0.75rem;
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-  }
 
   .experience {
     padding: 3rem 0;
